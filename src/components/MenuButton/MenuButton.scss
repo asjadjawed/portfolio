@@ -1,6 +1,6 @@
-@import "../../variables";
+@import "../../config";
 
-$menuButton-size: 2.2rem;
+$menuButton-size: 1.8rem;
 
 .MenuButton {
   height: $menuButton-size;
@@ -18,7 +18,19 @@ $menuButton-size: 2.2rem;
   &--btnLine {
     height: 12%;
     background: $foreground-color;
-    transition: all $transition-delay linear;
+    transition: all 0.5s linear;
+
+    &:nth-child(1) {
+      animation: slideIn 0.5s 0s;
+    }
+
+    &:nth-child(2) {
+      animation: slideIn 0.5s 0.1s;
+    }
+
+    &:nth-child(3) {
+      animation: slideIn 0.5s 0.2s;
+    }
 
     &-active:nth-child(1) {
       transform: translate(0, 275%);
@@ -30,5 +42,17 @@ $menuButton-size: 2.2rem;
     &-active:nth-child(3) {
       transform: translate(0, -275%) rotate(90deg);
     }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(5rem);
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
   }
 }

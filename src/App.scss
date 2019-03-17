@@ -1,4 +1,8 @@
-@import "./variables";
+@import "./config";
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: $primary-color;

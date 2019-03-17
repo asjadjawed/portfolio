@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../config";
 
 .Menu {
   &--overlay {
@@ -8,10 +8,13 @@
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    display: none;
+    display: flex;
+    opacity: 0.9;
+    visibility: hidden;
+    @include transitionEase;
 
     &-active {
-      display: flex;
+      visibility: visible;
     }
   }
 
@@ -20,6 +23,7 @@
     right: 1rem;
     top: 1rem;
     z-index: 1100;
+    cursor: pointer;
   }
 
   &--branding {
@@ -27,16 +31,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: $primary-color;
+    transform: translate(100%, 100%);
+    @include transitionEase;
+
+    &-active {
+      transform: translate(0);
+    }
   }
 
   &--portrait {
-    width: 20vh;
-    height: 20vh;
+    width: 25vh;
+    height: 25vh;
     border-radius: 50%;
+    background: gray;
+    border: solid 0.2rem $secondary-color;
   }
 
   &--nav {
     width: 50vw;
+    background: darken($primary-color, 5);
+    transform: translate(-100%, -100%);
+    @include transitionEase;
+
+    &-active {
+      transform: translate(0);
+    }
   }
 
   &--ul {
@@ -52,10 +72,35 @@
 
   &--li {
     padding: 1rem;
+    transform: translate(300rem);
+    @include transitionEase;
+
+    @for $x from 1 through 4 {
+      &:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
+      }
+    }
+
+    &-active {
+      transform: translate(0);
+    }
   }
 
   &--link {
     text-decoration: none;
     color: $foreground-color;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    color: $foreground-color;
+    @include transitionEase;
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &-selected {
+      color: $secondary-color;
+    }
   }
 }

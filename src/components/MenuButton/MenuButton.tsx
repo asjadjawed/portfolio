@@ -2,36 +2,35 @@ import React, { Component } from "react";
 
 import "./MenuButton.scss";
 
-export default class MenuButton extends Component {
-  public state = {
-    active: false
-  };
+interface IMenuStateProp {
+  menuState: boolean;
+}
 
+export default class MenuButton extends Component<IMenuStateProp> {
   public render() {
     return (
       <div
         className={
-          this.state.active ? "MenuButton MenuButton-active" : "MenuButton"
+          this.props.menuState ? "MenuButton MenuButton-active" : "MenuButton"
         }
-        onClick={() => this.setState({ active: !this.state.active })}
       >
         <div
           className={
-            this.state.active
+            this.props.menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }
         />
         <div
           className={
-            this.state.active
+            this.props.menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }
         />
         <div
           className={
-            this.state.active
+            this.props.menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import "./Menu.scss";
 
 import MenuButton from "../MenuButton/MenuButton";
@@ -15,8 +16,9 @@ export default class Menu extends Component {
           className="Menu--button"
           onClick={() => this.setState({ active: !this.state.active })}
         >
-          <MenuButton />
+          <MenuButton menuState={this.state.active} />
         </div>
+
         <div
           className={
             this.state.active
@@ -24,30 +26,77 @@ export default class Menu extends Component {
               : "Menu--overlay"
           }
         >
-          <div className="Menu--branding">
+          <div
+            className={
+              this.state.active
+                ? "Menu--branding Menu--branding-active"
+                : "Menu--branding"
+            }
+          >
             <div className="Menu--portrait" />
           </div>
-          <div className="Menu--nav">
+          <div
+            className={
+              this.state.active ? "Menu--nav Menu--nav-active" : "Menu--nav"
+            }
+          >
             <ul className="Menu--ul">
-              <li className="Menu--li">
-                <a href="/" className="Menu--link">
+              <li
+                className={
+                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
+                }
+              >
+                <NavLink
+                  exact
+                  to="/"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
                   About Me
-                </a>
+                </NavLink>
               </li>
-              <li className="Menu--li">
-                <a href="/" className="Menu--link">
+              <li
+                className={
+                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
+                }
+              >
+                <NavLink
+                  to="/work"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
                   My Work
-                </a>
+                </NavLink>
               </li>
-              <li className="Menu--li">
-                <a href="/" className="Menu--link">
+              <li
+                className={
+                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
+                }
+              >
+                <NavLink
+                  to="/skills"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
                   My Skills
-                </a>
+                </NavLink>
               </li>
-              <li className="Menu--li">
-                <a href="/" className="Menu--link">
+              <li
+                className={
+                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
+                }
+              >
+                <NavLink
+                  to="/contact"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
                   Contact Me
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
