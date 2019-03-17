@@ -8,29 +8,29 @@ interface IMenuStateProp {
 
 export default class MenuButton extends Component<IMenuStateProp> {
   public render() {
+    const { menuState } = this.props;
+
     return (
       <div
-        className={
-          this.props.menuState ? "MenuButton MenuButton-active" : "MenuButton"
-        }
+        className={menuState ? "MenuButton MenuButton-active" : "MenuButton"}
       >
         <div
           className={
-            this.props.menuState
+            menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }
         />
         <div
           className={
-            this.props.menuState
+            menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }
         />
         <div
           className={
-            this.props.menuState
+            menuState
               ? "MenuButton--btnLine MenuButton--btnLine-active"
               : "MenuButton--btnLine"
           }

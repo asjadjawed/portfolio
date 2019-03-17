@@ -32,12 +32,7 @@
     justify-content: center;
     align-items: center;
     background: $primary-color;
-    transform: translate(100%, 100%);
     @include transitionEase;
-
-    &-active {
-      transform: translate(0);
-    }
   }
 
   &--portrait {
@@ -49,21 +44,18 @@
   }
 
   &--nav {
-    width: 50vw;
     background: darken($primary-color, 5);
-    transform: translate(-100%, -100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     @include transitionEase;
-
-    &-active {
-      transform: translate(0);
-    }
   }
 
   &--ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,4 +95,52 @@
       color: $secondary-color;
     }
   }
+}
+
+@include mediaSmall {
+  .Menu {
+    &--overlay {
+      flex-direction: column;
+    }
+
+    &--branding {
+      width: 100vw;
+      height: 40vh;
+      transform: translate(-100%);
+
+      &-active {
+        transform: translate(0);
+      }
+    }
+
+    &--nav {
+      transform: translate(100%);
+    }
+  }
+}
+
+@include mediaLarge {
+  .Menu {
+    &--overlay {
+      flex-direction: row;
+    }
+
+    &--branding {
+      width: 50vw;
+      height: 100vh;
+      transform: translate(-100%, 100%);
+
+      &-active {
+        transform: translate(0);
+      }
+    }
+
+    &--nav {
+      transform: translate(100%, -100%);
+    }
+  }
+}
+
+.Menu--nav-active {
+  transform: translate(0);
 }

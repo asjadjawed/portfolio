@@ -10,42 +10,32 @@ export default class Menu extends Component {
   };
 
   public render() {
+    const { active } = this.state;
+
     return (
       <div className="Menu">
         <div
           className="Menu--button"
-          onClick={() => this.setState({ active: !this.state.active })}
+          onClick={() => this.setState({ active: !active })}
         >
-          <MenuButton menuState={this.state.active} />
+          <MenuButton menuState={active} />
         </div>
 
         <div
           className={
-            this.state.active
-              ? "Menu--overlay Menu--overlay-active"
-              : "Menu--overlay"
+            active ? "Menu--overlay Menu--overlay-active" : "Menu--overlay"
           }
         >
           <div
             className={
-              this.state.active
-                ? "Menu--branding Menu--branding-active"
-                : "Menu--branding"
+              active ? "Menu--branding Menu--branding-active" : "Menu--branding"
             }
           >
             <div className="Menu--portrait" />
           </div>
-          <div
-            className={
-              this.state.active ? "Menu--nav Menu--nav-active" : "Menu--nav"
-            }
-          >
+          <div className={active ? "Menu--nav Menu--nav-active" : "Menu--nav"}>
             <ul className="Menu--ul">
-              <li
-                className={
-                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
-                }
-              >
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
                   exact
                   to="/"
@@ -56,11 +46,7 @@ export default class Menu extends Component {
                   About Me
                 </NavLink>
               </li>
-              <li
-                className={
-                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
-                }
-              >
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
                   to="/work"
                   activeClassName="Menu--link-selected"
@@ -70,11 +56,7 @@ export default class Menu extends Component {
                   My Work
                 </NavLink>
               </li>
-              <li
-                className={
-                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
-                }
-              >
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
                   to="/skills"
                   activeClassName="Menu--link-selected"
@@ -84,11 +66,7 @@ export default class Menu extends Component {
                   My Skills
                 </NavLink>
               </li>
-              <li
-                className={
-                  this.state.active ? "Menu--li Menu--li-active" : "Menu--li"
-                }
-              >
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
                   to="/contact"
                   activeClassName="Menu--link-selected"

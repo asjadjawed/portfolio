@@ -11,7 +11,7 @@ $transition-function: ease;
   transition: all $transition-delay $transition-function;
 }
 
-$showBackground: true;
+$showBackground: false;
 $backgroundImage: url("./images/background.jpg");
 $background-opacity: 0.9;
 
@@ -32,5 +32,34 @@ $background-opacity: 0.9;
         z-index: -1000;
       }
     }
+  }
+}
+
+/* 
+Media Queries written to be mobile first
+Anything in small query carries to the largest unless over-ridden
+*/
+
+@mixin mediaSmall {
+  @media screen and (min-width: 0px) {
+    @content;
+  }
+}
+
+@mixin mediaMedium {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaLarge {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaXLarge {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
