@@ -1,32 +1,34 @@
 @import "../../variables";
 
+$menuButton-size: 2.2rem;
+
 .MenuButton {
-  height: 150px;
-  width: 150px;
+  height: $menuButton-size;
+  width: $menuButton-size;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  transition: all $transition-delay $transition-function;
-}
+  transition: all $transition-delay linear;
+  cursor: pointer;
 
-.MenuButton--btnLine {
-  height: 12%;
-  background: $foreground-color;
-  transition: all $transition-delay $transition-function;
-}
+  &-active {
+    transform: rotate(calc(45deg * 3));
+  }
 
-.MenuButton-active {
-  transform: rotate(calc(45deg * 3));
-}
+  &--btnLine {
+    height: 12%;
+    background: $foreground-color;
+    transition: all $transition-delay linear;
 
-.MenuButton--btnLine-active:nth-child(1) {
-  transform: translate(0, 275%);
-}
+    &-active:nth-child(1) {
+      transform: translate(0, 275%);
+    }
+    &-active:nth-child(2) {
+      filter: opacity(0%);
+    }
 
-.MenuButton--btnLine-active:nth-child(2) {
-  filter: opacity(0%);
-}
-
-.MenuButton--btnLine-active:nth-child(3) {
-  transform: translate(0, -275%) rotate(90deg);
+    &-active:nth-child(3) {
+      transform: translate(0, -275%) rotate(90deg);
+    }
+  }
 }

@@ -9,3 +9,4 @@ Following technologies were used in its creation:
 - React
 - React Router
 - Normalize.css
+- Font Awesome

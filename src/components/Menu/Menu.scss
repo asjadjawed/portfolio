@@ -1,0 +1,61 @@
+@import "../../variables";
+
+.Menu {
+  &--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+
+    &-active {
+      display: flex;
+    }
+  }
+
+  &--button {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1100;
+  }
+
+  &--branding {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--portrait {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+  }
+
+  &--nav {
+    width: 50vw;
+  }
+
+  &--ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--li {
+    padding: 1rem;
+  }
+
+  &--link {
+    text-decoration: none;
+    color: $foreground-color;
+  }
+}

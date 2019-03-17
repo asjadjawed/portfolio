@@ -1,7 +1,36 @@
 $primary-color: #444;
 $foreground-color: #eee;
+$secondary-color: #eece1a;
 
-$primary-font: Arial, Helvetica, sans-serif;
+$primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-$transition-delay: 0.7s;
+$transition-delay: 0.5s;
 $transition-function: ease;
+
+@mixin transitionEase {
+  transition: all $transition-delay $transition-function;
+}
+
+$showBackground: true;
+$backgroundImage: url("./images/background.jpg");
+$background-opacity: 0.9;
+
+@mixin background {
+  @if $showBackground {
+    body {
+      background: $backgroundImage;
+      background-size: cover;
+
+      &::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($primary-color, $background-opacity);
+        z-index: -1000;
+      }
+    }
+  }
+}
