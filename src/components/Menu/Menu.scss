@@ -39,8 +39,8 @@
     width: 25vh;
     height: 25vh;
     border-radius: 50%;
-    background: setTextColor($primary-color);
-    border: solid 0.5rem $secondary-color;
+    background: url("../../images/portrait.png");
+    border: solid 0.3rem $secondary-color;
   }
 
   &--nav {

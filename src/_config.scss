@@ -11,7 +11,23 @@ $secondary-color: #eece1a;
 
 $primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-$showBackground: true;
+@mixin heading {
+  font-size: 6rem;
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+@mixin subheading {
+  font-weight: 400;
+  margin: 1.5rem 0;
+}
+
+@mixin emphasisText {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+$showBackground: false;
 $backgroundImage: url("./images/background.jpg");
 $background-opacity: 0.8;
 
@@ -35,7 +51,7 @@ $background-opacity: 0.8;
   }
 }
 
-$transition-delay: 0.5s;
+$transition-delay: 0.4s;
 $transition-function: ease;
 
 @mixin transitionEase {

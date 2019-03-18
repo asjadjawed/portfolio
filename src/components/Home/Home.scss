@@ -1,14 +1,17 @@
 @import "../../config";
 
 .Home {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &--heading {
-    font-size: 6rem;
-    font-weight: 400;
-    margin: 1.5rem 0;
+    @include heading;
   }
 
   &--subHeading {
-    font-weight: 400;
+    @include subheading;
   }
 
   &--icon {
