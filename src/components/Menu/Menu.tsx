@@ -43,6 +43,16 @@ export default class Menu extends Component {
                   className="Menu--link"
                   onClick={() => this.setState({ active: false })}
                 >
+                  Home
+                </NavLink>
+              </li>
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
+                <NavLink
+                  to="/about"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
                   About Me
                 </NavLink>
               </li>
@@ -54,16 +64,6 @@ export default class Menu extends Component {
                   onClick={() => this.setState({ active: false })}
                 >
                   My Work
-                </NavLink>
-              </li>
-              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
-                <NavLink
-                  to="/skills"
-                  activeClassName="Menu--link-selected"
-                  className="Menu--link"
-                  onClick={() => this.setState({ active: false })}
-                >
-                  My Skills
                 </NavLink>
               </li>
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>

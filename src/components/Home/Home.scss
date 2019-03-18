@@ -1,6 +1,6 @@
 @import "../../config";
 
-.AboutMe {
+.Home {
   &--heading {
     font-size: 6rem;
     font-weight: 400;
@@ -9,6 +9,17 @@
 
   &--subHeading {
     font-weight: 400;
+  }
+
+  &--icon {
+    padding: 0.5rem;
+    font-size: 2.2rem;
+    color: setTextColor($primary-color);
+    @include transitionEase;
+
+    &:hover {
+      color: $secondary-color;
+    }
   }
 
   &--text-secondaryColor {

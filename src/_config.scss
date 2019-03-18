@@ -1,19 +1,19 @@
+@function setTextColor($color) {
+  @if (lightness($color) > 40) {
+    @return #111;
+  } @else {
+    @return #eee;
+  }
+}
+
 $primary-color: #444;
-$foreground-color: #eee;
 $secondary-color: #eece1a;
 
 $primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-$transition-delay: 0.5s;
-$transition-function: ease;
-
-@mixin transitionEase {
-  transition: all $transition-delay $transition-function;
-}
-
-$showBackground: false;
+$showBackground: true;
 $backgroundImage: url("./images/background.jpg");
-$background-opacity: 0.9;
+$background-opacity: 0.8;
 
 @mixin background {
   @if $showBackground {
@@ -33,6 +33,13 @@ $background-opacity: 0.9;
       }
     }
   }
+}
+
+$transition-delay: 0.5s;
+$transition-function: ease;
+
+@mixin transitionEase {
+  transition: all $transition-delay $transition-function;
 }
 
 /* 

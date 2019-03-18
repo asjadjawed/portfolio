@@ -17,7 +17,7 @@ $menuButton-size: 1.8rem;
 
   &--btnLine {
     height: 12%;
-    background: $foreground-color;
+    background: setTextColor($primary-color);
     transition: all 0.5s linear;
 
     &:nth-child(1) {
