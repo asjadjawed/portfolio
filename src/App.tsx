@@ -15,7 +15,7 @@ import Card from "./components/Card/Card";
 class App extends Component {
   public render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <header>
             <Menu />
