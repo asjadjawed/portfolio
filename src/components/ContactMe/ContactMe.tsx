@@ -13,7 +13,7 @@ export default function ContactMe() {
         <div className="ContactMe--contact">
           <h3>
             <span className="ContactMe--text-secondaryColor">Email: </span>
-            asjadjawed@gmail.com
+            &#109;&#101;&#64;&#97;&#115;&#106;&#97;&#100;&#46;&#100;&#101;&#118;
           </h3>
         </div>
         <div className="ContactMe--contact">

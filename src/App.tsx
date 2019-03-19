@@ -14,16 +14,6 @@ import Card from "./components/Card/Card";
 
 class App extends Component {
   public render() {
-    // return (
-    //   <Card cardID="1" heading="heading" subheading="subheading">
-    //     <ul>
-    //       <li>Lorem, ipsum dolor.</li>
-    //       <li>Vitae, expedita eos.</li>
-    //       <li>Facilis, debitis temporibus.</li>
-    //     </ul>
-    //   </Card>
-    // );
-
     return (
       <Router>
         <div className="App">
@@ -32,10 +22,10 @@ class App extends Component {
           </header>
           <main>
             <Switch>
-              <Route exact path="/portfolio/" component={Home} />
-              <Route exact path="/portfolio/about" component={AboutMe} />
-              <Route path="/portfolio/contact" component={ContactMe} />
-              <Route path="/portfolio/work" component={MyWork} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/about" component={AboutMe} />
+              <Route path="/contact" component={ContactMe} />
+              <Route path="/work" component={MyWork} />
             </Switch>
           </main>
           <footer>
