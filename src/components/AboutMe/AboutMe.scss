@@ -32,11 +32,25 @@
     grid-area: portrait;
     border-radius: 50%;
     border: solid 0.3rem $secondary-color;
+    width: 225px;
+    height: 225px;
   }
 
   &--bio {
     grid-area: bio;
     @include emphasisText;
+  }
+}
+
+.Card {
+  &--front-end {
+    grid-area: cfe;
+  }
+  &--back-end {
+    grid-area: cbe;
+  }
+  &--other {
+    grid-area: o;
   }
 }
 
@@ -47,9 +61,20 @@
     grid-template-areas:
       "portrait"
       "bio"
-      "card"
-      "card"
-      "card";
+      "cfe"
+      "cbe"
+      "o";
+  }
+}
+
+@include mediaLarge {
+  .AboutMe--main {
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    grid-template-areas:
+      "portrait bio bio"
+      ". cfe ."
+      ". cbe ."
+      ". o .";
   }
 }
 
@@ -58,6 +83,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       "portrait bio bio"
-      "card card card";
+      "cfe cbe o";
   }
 }

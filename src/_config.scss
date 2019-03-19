@@ -81,6 +81,12 @@ Anything in small query carries to the largest unless over-ridden
   }
 }
 
+@mixin mediaMLarge {
+  @media screen and (min-width: 875px) {
+    @content;
+  }
+}
+
 @mixin mediaXLarge {
   @media screen and (min-width: 1171px) {
     @content;

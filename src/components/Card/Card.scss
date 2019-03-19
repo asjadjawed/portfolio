@@ -16,18 +16,18 @@
 
 @include mediaMedium {
   .Card {
-    width: 350px;
+    width: 300px;
   }
 }
 
 @include mediaLarge {
   .Card {
-    width: 450px;
+    width: 500px;
   }
 }
 
 @include mediaXLarge {
   .Card {
-    width: 350px;
+    width: 325px;
   }
 }
