@@ -17,6 +17,9 @@ footer {
   box-sizing: border-box;
   opacity: 0.9;
   margin-top: 5rem;
+  font-weight: 100;
+  color: darken((setTextColor($primary-color)), 40);
+  text-align: right;
 }
 
 @include background;

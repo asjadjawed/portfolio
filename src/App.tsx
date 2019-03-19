@@ -38,7 +38,9 @@ class App extends Component {
               <Route path="/work" component={MyWork} />
             </Switch>
           </main>
-          <footer>Copyright &copy; {new Date().getFullYear()}</footer>
+          <footer>
+            Copyright &copy; {new Date().getFullYear()}. All rights reserved.
+          </footer>
         </div>
       </Router>
     );

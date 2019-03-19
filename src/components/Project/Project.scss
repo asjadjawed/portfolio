@@ -1,0 +1,61 @@
+@import "../../config";
+
+.Project {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: lighten($primary-color, 5);
+  border-bottom: 0.3rem solid $secondary-color;
+  display: inline-block;
+
+  &--heading {
+    text-align: center;
+  }
+
+  &--image {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &--description {
+    text-align: center;
+  }
+
+  &--buttons {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      text-decoration: none;
+      color: setTextColor($primary-color);
+      font-size: 1.2rem;
+      @include transitionEase;
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      &-selected {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+@include mediaSmall {
+  .Project {
+    width: 300px;
+  }
+}
+
+@include mediaMedium {
+  .Project {
+    width: 350px;
+  }
+}
+
+@include mediaXLarge {
+  .Project {
+    width: 325px;
+  }
+}

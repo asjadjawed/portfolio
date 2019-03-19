@@ -1,1 +1,45 @@
 @import "../../config";
+
+.MyWork {
+  margin-bottom: 5rem;
+
+  &--heading {
+    @include heading;
+  }
+
+  &--subHeading {
+    @include subheading;
+  }
+
+  &--text-secondaryColor {
+    color: $secondary-color;
+  }
+
+  &--main {
+    max-width: 1100px;
+    margin: 5rem auto;
+    display: grid;
+    grid-gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+@include mediaSmall {
+  .MyWork--main {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+}
+
+@include mediaLarge {
+  .MyWork--main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mediaXLarge {
+  .MyWork--main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

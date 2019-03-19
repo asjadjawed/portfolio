@@ -53,7 +53,7 @@
   }
 }
 
-@include mediaLarge {
+@include mediaXLarge {
   .AboutMe--main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
