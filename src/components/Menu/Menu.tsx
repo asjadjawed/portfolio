@@ -38,7 +38,7 @@ export default class Menu extends Component {
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
                   exact
-                  to="/"
+                  to="/portfolio/"
                   activeClassName="Menu--link-selected"
                   className="Menu--link"
                   onClick={() => this.setState({ active: false })}
@@ -48,7 +48,7 @@ export default class Menu extends Component {
               </li>
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
-                  to="/about"
+                  to="/portfolio/about"
                   activeClassName="Menu--link-selected"
                   className="Menu--link"
                   onClick={() => this.setState({ active: false })}
@@ -58,7 +58,7 @@ export default class Menu extends Component {
               </li>
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
-                  to="/work"
+                  to="/portfolio/work"
                   activeClassName="Menu--link-selected"
                   className="Menu--link"
                   onClick={() => this.setState({ active: false })}
@@ -68,7 +68,7 @@ export default class Menu extends Component {
               </li>
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
-                  to="/contact"
+                  to="/portfolio/contact"
                   activeClassName="Menu--link-selected"
                   className="Menu--link"
                   onClick={() => this.setState({ active: false })}

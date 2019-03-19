@@ -32,10 +32,10 @@ class App extends Component {
           </header>
           <main>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={AboutMe} />
-              <Route path="/contact" component={ContactMe} />
-              <Route path="/work" component={MyWork} />
+              <Route exact path="/portfolio/" component={Home} />
+              <Route exact path="/portfolio/about" component={AboutMe} />
+              <Route path="/portfolio/contact" component={ContactMe} />
+              <Route path="/portfolio/work" component={MyWork} />
             </Switch>
           </main>
           <footer>
