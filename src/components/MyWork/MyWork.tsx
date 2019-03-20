@@ -12,6 +12,13 @@ export default class MyWork extends Component {
     tagsList
   };
 
+  private inputRef = React.createRef<HTMLInputElement>();
+
+  public componentDidMount() {
+    const searchInput = this.inputRef.current!;
+    searchInput.focus();
+  }
+
   public render() {
     const { projects: projectsList } = this.state;
 
@@ -28,6 +35,7 @@ export default class MyWork extends Component {
           onChange={e => this.inputAndFilter(e.currentTarget.value)}
           placeholder="search by comma separated tags"
           value={this.state.search}
+          ref={this.inputRef}
         />
 
         <div className="MyWork--suggestions">

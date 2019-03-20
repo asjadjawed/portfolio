@@ -91,6 +91,7 @@ export const projects = [
     sourceLink: "https://github.com/asjadjawed/weather-server",
     tags: [
       "Node.js",
+      "CSS3",
       "Express",
       "request",
       "Handlebars",
