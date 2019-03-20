@@ -22,12 +22,19 @@
     max-width: 500px;
     margin: 3rem auto;
     line-height: 2;
+    padding: 0.5rem 2rem;
     background: lighten($primary-color, 5);
     color: setTextColor($primary-color);
     border: none;
     outline: none;
     font-size: 1.5rem;
-    border-bottom: 0.3rem solid $secondary-color;
+    border-bottom: 0.3rem solid lighten($primary-color, 5);
+    @include transitionEase;
+
+    &:hover,
+    &:focus {
+      border-bottom: 0.3rem solid $secondary-color;
+    }
   }
 
   &--suggestions {
@@ -42,6 +49,11 @@
     padding: 0.2rem 0.5rem;
     border-radius: 1rem;
     cursor: pointer;
+    @include transitionEase;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &--main {
