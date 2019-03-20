@@ -69,8 +69,8 @@ export const projects: IProject[] = [
   },
   {
     description:
-      "Dynamic Single Page App built with TypeScript OOP stores tasks in browser localStorage.",
-    heading: "Todo SPA - (No Frameworks)",
+      "Dynamic Single Page App built with TypeScript OOP stores tasks in browser localStorage. No frameworks used.",
+    heading: "Todo App",
     image: todoThumb,
     liveLink: "https://asjad.dev/todo-list/",
     projectID: "todo",
@@ -156,7 +156,7 @@ export const projects: IProject[] = [
   },
   {
     description:
-      "Single Page App built with Vanilla JS & OOP stores via browser localStorage.",
+      "Single Page App built with Vanilla JS & OOP stores via browser localStorage. No frameworks used.",
     heading: "Shopping List",
     image: shoppingThumb,
     liveLink: "https://asjad.dev/shopping-list/",
