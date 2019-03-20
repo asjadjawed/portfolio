@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Live: [https://asjadjawed.github.io/portfolio/](https://asjadjawed.github.io/portfolio/)
+Live: [https://asjad.dev/](https://asjad.dev/)
 
 This is the source code for my portfolio website.
 Following technologies were used in its creation:
