@@ -5,10 +5,18 @@
   padding: 1rem;
   background: lighten($primary-color, 5);
   border-bottom: 0.3rem solid $secondary-color;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  @include transitionEase;
+
+  &:hover {
+    transform: scale(1.07);
+  }
 
   &--heading {
     text-align: center;
+    margin: 2rem auto;
   }
 
   &--image {
@@ -19,6 +27,8 @@
 
   &--description {
     text-align: center;
+    margin: 1.5rem 0;
+    flex-basis: 5rem;
   }
 
   &--buttons {
