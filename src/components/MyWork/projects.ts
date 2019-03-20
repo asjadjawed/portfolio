@@ -1,13 +1,13 @@
 import faceRecognitionThumb from "../../images/projects/face-recognition.jpg";
-import galleryThumb from "../../images/projects/flexbox-gallery.jpg";
-import gradientThumb from "../../images/projects/gradient-generator.jpg";
-import hackThumb from "../../images/projects/hackathon3k.jpg";
-import notesThumb from "../../images/projects/node-notes-cli.jpg";
+import galleryThumb from "../../images/projects/gallery.jpg";
+import gradientThumb from "../../images/projects/gradient.jpg";
+import hackThumb from "../../images/projects/hackathon-3k.jpg";
+import notesThumb from "../../images/projects/notes.jpg";
 import portfolioThumb from "../../images/projects/portfolio.jpg";
-import roboThumb from "../../images/projects/robo-team.jpg";
-import shoppingThumb from "../../images/projects/shopping-list.jpg";
-import todoThumb from "../../images/projects/todo-list.jpg";
-import weatherThumb from "../../images/projects/weather-app.jpg";
+import roboThumb from "../../images/projects/robo-inc.jpg";
+import shoppingThumb from "../../images/projects/shopping.jpg";
+import todoThumb from "../../images/projects/todo.jpg";
+import weatherThumb from "../../images/projects/weather.jpg";
 
 export const projects = [
   {
@@ -25,8 +25,8 @@ export const projects = [
       "React-Router",
       "Normalize.css",
       "Font Awesome",
-      "Portfolio",
-      "Website"
+      "portfolio",
+      "website"
     ]
   },
   {
@@ -41,7 +41,6 @@ export const projects = [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "Google Fonts",
       "React",
       "React Tilt",
       "Particles.js",
@@ -51,18 +50,14 @@ export const projects = [
       "PostgreSQL",
       "knex.js",
       "Clarifai API",
-      "AI",
-      "API",
-      "Face Recognition",
+      "face recognition",
       "Heroku",
-      "REST API",
-      "HTTP",
-      "JSON"
+      "REST API"
     ]
   },
   {
     description:
-      "Dynamic Single Page App built with TypeScript OOP stores tasks in JSON in browser localStorage.",
+      "Dynamic Single Page App built with TypeScript OOP stores tasks in browser localStorage.",
     heading: "Todo SPA - (No Frameworks)",
     image: todoThumb,
     liveLink: "https://asjad.dev/todo-list/",
@@ -70,14 +65,10 @@ export const projects = [
     sourceLink: "https://github.com/asjadjawed/todo-list",
     tags: [
       "HTML5",
-      "Google Fonts",
       "CSS3",
       "TypeScript",
       "Web Storage API",
-      "list",
       "todo",
-      "oop",
-      "vanilla",
       "zero frameworks"
     ]
   },
@@ -98,13 +89,8 @@ export const projects = [
       "MapQuest API",
       "DarkSky API",
       "Heroku",
-      "promises",
-      "async await",
       "weather",
-      "API",
-      "HTTP",
-      "REST API",
-      "JSON"
+      "REST API"
     ]
   },
   {
@@ -115,14 +101,7 @@ export const projects = [
     liveLink: "https://asjad.dev/gradient-generator/",
     projectID: "gradient",
     sourceLink: "https://github.com/asjadjawed/gradient-generator",
-    tags: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Google Fonts",
-      "gradients",
-      "generator"
-    ]
+    tags: ["HTML5", "CSS3", "JavaScript", "gradients"]
   },
   {
     description:
@@ -136,13 +115,10 @@ export const projects = [
       "HTML5",
       "CSS3",
       "JavaScript",
-      "Google Fonts",
       "React",
       "RoboHash API",
       "faker",
-      "funny",
-      "robots",
-      "API"
+      "funny"
     ]
   },
   {
@@ -153,15 +129,7 @@ export const projects = [
     liveLink: "https://asjad.dev/hackathon-signup/",
     projectID: "hackathon3k",
     sourceLink: "https://github.com/asjadjawed/hackathon-signup",
-    tags: [
-      "HTML5",
-      "Google Fonts",
-      "CSS3",
-      "Animate.css",
-      "funny",
-      "animation",
-      "landing page"
-    ]
+    tags: ["HTML5", "CSS3", "Animate.css", "funny", "landing page"]
   },
   {
     description:
@@ -172,17 +140,7 @@ export const projects = [
     projectID: "notes",
     sourceLink:
       "https://github.com/asjadjawed/notes-node/blob/master/README.md",
-    tags: [
-      "Node.js",
-      "JSON",
-      "yargs",
-      "chalk",
-      "Command Line",
-      "CLI",
-      "offline",
-      "filesystem",
-      "arguments"
-    ]
+    tags: ["Node.js", "JSON", "yargs", "chalk", "Command Line", "filesystem"]
   },
   {
     description:
@@ -194,14 +152,11 @@ export const projects = [
     sourceLink: "https://github.com/asjadjawed/shopping-list",
     tags: [
       "HTML5",
-      "Google Fonts",
       "CSS3",
       "JavaScript",
       "Web Storage API",
-      "list",
-      "oop",
-      "vanilla",
-      "zero frameworks"
+      "zero frameworks",
+      "list"
     ]
   },
   {
@@ -212,10 +167,27 @@ export const projects = [
     liveLink: "https://asjad.dev/pic-gallery-flexbox/",
     projectID: "gallery",
     sourceLink: "https://github.com/asjadjawed/pic-gallery-flexbox",
-    tags: ["HTML5", "CSS3", "Google Fonts", "UnSplash API", "gallery", "API"]
+    tags: ["HTML5", "CSS3", "UnSplash API", "gallery"]
   }
 ];
 
-export const tagsList = Array.from(
-  new Set(projects.flatMap(({ tags }) => tags).sort())
+interface IObjectCount {
+  [key: string]: number;
+}
+
+const objectCount: IObjectCount = {};
+
+projects
+  .flatMap(({ tags }) => tags)
+  .sort()
+  .forEach(element => {
+    if (!objectCount[element]) {
+      Object.assign(objectCount, { [element]: 1 });
+    } else {
+      Object.assign(objectCount, { [element]: objectCount[element] + 1 });
+    }
+  });
+
+export const tagsList = Object.keys(objectCount).sort(
+  (a, b) => objectCount[b] - objectCount[a]
 );

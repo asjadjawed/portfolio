@@ -93,6 +93,7 @@ export default class MyWork extends Component {
   };
 
   private filterTech = () => {
+    // copying state to search and filtering, as search also updates input field
     const search = [...this.state.search].map(value => value.trim());
 
     // check if there is an input
