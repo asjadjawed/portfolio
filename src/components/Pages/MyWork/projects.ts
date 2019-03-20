@@ -1,13 +1,13 @@
-import faceRecognitionThumb from "../../images/projects/face-recognition.jpg";
-import galleryThumb from "../../images/projects/gallery.jpg";
-import gradientThumb from "../../images/projects/gradient.jpg";
-import hackThumb from "../../images/projects/hackathon-3k.jpg";
-import notesThumb from "../../images/projects/notes.jpg";
-import portfolioThumb from "../../images/projects/portfolio.jpg";
-import roboThumb from "../../images/projects/robo-inc.jpg";
-import shoppingThumb from "../../images/projects/shopping.jpg";
-import todoThumb from "../../images/projects/todo.jpg";
-import weatherThumb from "../../images/projects/weather.jpg";
+import faceRecognitionThumb from "../../../images/projects/face-recognition.jpg";
+import galleryThumb from "../../../images/projects/gallery.jpg";
+import gradientThumb from "../../../images/projects/gradient.jpg";
+import hackThumb from "../../../images/projects/hackathon-3k.jpg";
+import notesThumb from "../../../images/projects/notes.jpg";
+import portfolioThumb from "../../../images/projects/portfolio.jpg";
+import roboThumb from "../../../images/projects/robo-inc.jpg";
+import shoppingThumb from "../../../images/projects/shopping.jpg";
+import todoThumb from "../../../images/projects/todo.jpg";
+import weatherThumb from "../../../images/projects/weather.jpg";
 interface IProject {
   description: string;
   heading: string;

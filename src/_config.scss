@@ -9,7 +9,8 @@
 $primary-color: #444;
 $secondary-color: orangered;
 
-$primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Scope+One");
+$primary-font: "Scope One", serif;
 
 @mixin heading {
   font-size: 6rem;
@@ -24,7 +25,6 @@ $primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 @mixin emphasisText {
   font-size: 1.2rem;
-  line-height: 1.5;
 }
 
 $showBackground: false;

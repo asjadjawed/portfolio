@@ -2,9 +2,9 @@ import React from "react";
 
 import "./AboutMe.scss";
 
-import Card from "../Card/Card";
+import Card from "../../Card/Card";
 
-import portrait from "../../images/portrait.png";
+import portrait from "../../../images/portrait.png";
 
 export default function AboutMe() {
   return (

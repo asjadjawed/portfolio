@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.scss";
 
-import Menu from "./components/Menu/Menu";
+import Menu from "./Menu/Menu";
 
-import AboutMe from "./components/AboutMe/AboutMe";
-import ContactMe from "./components/ContactMe/ContactMe";
-import Home from "./components/Home/Home";
-import MyWork from "./components/MyWork/MyWork";
+import AboutMe from "./Pages/AboutMe/AboutMe";
+import ContactMe from "./Pages/ContactMe/ContactMe";
+import Home from "./Pages/Home/Home";
+import MyWork from "./Pages/MyWork/MyWork";
 
-import Card from "./components/Card/Card";
+import Card from "./Card/Card";
 
 class App extends Component {
   public render() {

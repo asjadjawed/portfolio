@@ -1,16 +1,17 @@
-@import "./config";
+@import "../config";
 
 body {
   background: $primary-color;
   font-family: $primary-font;
   color: setTextColor($primary-color);
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  background: darken($primary-color, 3);
+  background: darken($primary-color, 5);
   width: 100%;
   margin: 0;
   padding: 0.75rem;
@@ -18,7 +19,7 @@ footer {
   opacity: 0.9;
   margin-top: 5rem;
   font-weight: 100;
-  color: darken((setTextColor($primary-color)), 40);
+  color: darken((setTextColor($primary-color)), 5);
   text-align: center;
 }
 
@@ -42,7 +43,6 @@ Anything in small query carries to the largest unless over-ridden
 @include mediaLarge {
   main {
     text-align: left;
-    line-height: 1.5;
     padding: 0 2rem;
   }
 

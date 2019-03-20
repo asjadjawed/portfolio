@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Project from "../Project/Project";
+import Project from "../../Project/Project";
 import { makeFlatUniqueCountSortedArray, projects, tagsList } from "./projects";
 
 import "./MyWork.scss";
