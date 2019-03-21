@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+// Should use BrowserRouter, but HashRouter needed for GitHub Pages
 
 import "./App.scss";
 
@@ -10,12 +11,10 @@ import ContactMe from "./Pages/ContactMe/ContactMe";
 import Home from "./Pages/Home/Home";
 import MyWork from "./Pages/MyWork/MyWork";
 
-import Card from "./Card/Card";
-
 class App extends Component {
   public render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/">
         <div className="App">
           <header>
             <Menu />
