@@ -6,6 +6,9 @@ import "normalize.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
+// Disable right-click on website
+document.oncontextmenu = e => e.preventDefault();
+
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change

@@ -27,22 +27,22 @@ export default function AboutMe() {
         </div>
       </div>
       <div className="AboutMe--icons">
-        {/* {skills.backEnd.map(skill => (
+        {skills.backEnd.map(skill => (
           <TechIcon
             key={skill[0]}
             name={skill[0]}
             url={skill[1]}
             image={skill[2]}
           />
-        ))} */}
-        {/* {skills.devOps.map(skill => (
+        ))}
+        {skills.devOps.map(skill => (
           <TechIcon
             key={skill[0]}
             name={skill[0]}
             url={skill[1]}
             image={skill[2]}
           />
-        ))} */}
+        ))}
         {skills.frontEnd.map(skill => (
           <TechIcon
             key={skill[0]}
