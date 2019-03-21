@@ -42,11 +42,11 @@
       @include transitionEase;
 
       &:hover {
-        color: $secondary-color;
+        @include secondaryColor;
       }
 
       &-selected {
-        color: $secondary-color;
+        @include secondaryColor;
       }
     }
   }

@@ -21,11 +21,11 @@
     @include transitionEase;
 
     &:hover {
-      color: $secondary-color;
+      @include secondaryColor;
     }
   }
 
   &--text-secondaryColor {
-    color: $secondary-color;
+    @include secondaryColor;
   }
 }

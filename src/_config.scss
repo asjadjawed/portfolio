@@ -1,5 +1,5 @@
 @function setTextColor($color) {
-  @if (lightness($color) > 40) {
+  @if (lightness($color) > 50) {
     @return #111;
   } @else {
     @return #eee;
@@ -15,16 +15,20 @@ $primary-font: "Scope One", serif;
 @mixin heading {
   font-size: 6rem;
   font-weight: 400;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 @mixin subheading {
   font-weight: 400;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 @mixin emphasisText {
   font-size: 1.2rem;
+}
+
+@mixin secondaryColor {
+  color: $secondary-color;
 }
 
 $showBackground: false;

@@ -43,6 +43,7 @@ import sassIcon from "../../../images/icons/sass.svg";
 import tsLintIcon from "../../../images/icons/tslint.svg";
 import typescriptIcon from "../../../images/icons/typescript.svg";
 import virtualBoxIcon from "../../../images/icons/virtualbox.svg";
+import visualStudioCodeIcon from "../../../images/icons/visualstudiocode.svg";
 import webpackIcon from "../../../images/icons/webpack.svg";
 import windowsIcon from "../../../images/icons/windows.svg";
 import wordPressIcon from "../../../images/icons/wordpress.svg";
@@ -92,7 +93,8 @@ const skills = {
     ["TSLint", "https://palantir.github.io/tslint/", tsLintIcon],
     ["Digital Ocean", "https://www.digitalocean.com/", digitalOceanIcon],
     ["Heroku", "https://www.heroku.com/", herokuIcon],
-    ["VirtualBox", "https://www.virtualbox.org/wiki/Downloads", virtualBoxIcon]
+    ["VirtualBox", "https://www.virtualbox.org/wiki/Downloads", virtualBoxIcon],
+    ["VS Code", "https://code.visualstudio.com/", visualStudioCodeIcon]
   ],
   frontEnd: [
     ["HTML5", "https://www.w3.org/html/", html5Icon],

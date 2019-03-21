@@ -9,7 +9,7 @@ export default function Home() {
         Asjad <span className="Home--text-secondaryColor">Jawed</span>
       </h1>
       <h2 className="Home--subHeading">
-        Full-Stack Developer, Programmer, &amp; Tech Coach
+        Full-Stack Developer, Consultant, &amp; Tech Coach
       </h2>
       <div>
         <a

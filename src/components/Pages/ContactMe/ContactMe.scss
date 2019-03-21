@@ -12,7 +12,7 @@
   }
 
   &--text-secondaryColor {
-    color: $secondary-color;
+    @include secondaryColor;
   }
 
   &--main {

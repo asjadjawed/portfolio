@@ -1,5 +1,14 @@
 @import "../../../config";
 
+@mixin skillsHeading {
+  font-size: 1.2rem;
+  text-align: center;
+  background: $secondary-color;
+  color: setTextColor($secondary-color);
+  padding: 0.3rem 1.5rem;
+  border-radius: 1rem;
+}
+
 .AboutMe {
   margin-bottom: 5rem;
 
@@ -12,58 +21,75 @@
   }
 
   &--text-secondaryColor {
-    color: $secondary-color;
+    @include secondaryColor;
   }
 
   &--main {
     max-width: 1100px;
-    margin: 5rem auto;
+    margin: 1rem auto;
     display: grid;
-    grid-gap: 2.5rem;
+    grid-gap: 0rem 2.5rem;
     align-items: center;
     justify-items: center;
+  }
 
-    grid-template-areas:
-      "portrait bio bio"
-      "card card card";
+  &--gridHeading {
+    grid-area: gh;
+    justify-self: left;
   }
 
   &--image {
     grid-area: portrait;
     border-radius: 50%;
     border: solid 0.3rem $secondary-color;
+    margin: auto;
     width: 225px;
     height: 225px;
   }
 
   &--bio {
-    grid-area: bio;
     @include emphasisText;
+    grid-area: bio;
+    text-align: left;
   }
-}
 
-.Card {
-  &--front-end {
-    grid-area: cfe;
+  &--skillsSection {
+    background: lighten($primary-color, 5);
+    padding: 2rem;
   }
-  &--back-end {
-    grid-area: cbe;
+
+  &--skillsSectionHeading {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.3rem;
   }
-  &--other {
-    grid-area: o;
+
+  &--skills {
+    background: lighten($primary-color, 5);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  &--skillsHeading {
+    @include skillsHeading;
+  }
+
+  &--skillsBorder {
+    border: 0.15rem solid $secondary-color;
+    border-radius: 1rem;
+    margin: 2rem 0rem 5rem;
   }
 }
 
 @include mediaSmall {
   .AboutMe--main {
     grid-template-columns: 1fr;
-    align-items: stretch;
     grid-template-areas:
       "portrait"
-      "bio"
-      "cfe"
-      "cbe"
-      "o";
+      "gh"
+      "bio";
   }
 }
 
@@ -71,10 +97,8 @@
   .AboutMe--main {
     grid-template-columns: repeat(3, minmax(10px, 1fr));
     grid-template-areas:
-      "portrait bio bio"
-      ". cfe ."
-      ". cbe ."
-      ". o .";
+      ". gh ."
+      "portrait bio bio";
   }
 }
 
@@ -82,15 +106,7 @@
   .AboutMe--main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "portrait bio bio"
-      "cfe cbe o";
+      ". gh ."
+      "portrait bio bio";
   }
-}
-
-.AboutMe--icons {
-  background: lighten($primary-color, 5);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
 }
