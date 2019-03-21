@@ -16,7 +16,11 @@ export default class MyWork extends Component {
 
   public componentDidMount() {
     const searchInput = this.inputRef.current!;
-    searchInput.focus();
+    const mediaQuery = window.matchMedia("(min-width: 875px)");
+
+    if (mediaQuery.matches) {
+      searchInput.focus();
+    }
   }
 
   public render() {
