@@ -33,6 +33,7 @@ export default class MyWork extends Component {
         </h1>
         <h2 className="MyWork--subHeading">Check out some of my projects...</h2>
 
+        {/* Get rid of the input box, only the tag cloud will exist, they will toggle on / off */}
         <input
           type="search"
           className="MyWork--search"

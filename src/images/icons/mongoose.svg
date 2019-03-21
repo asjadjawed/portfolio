@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-custom_1">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="custom_1" data-name="custom – 1" clip-path="url(#clip-custom_1)">
+    <text id="mongoose" transform="translate(14 293)" fill="#650000" font-size="119" font-family="Helvetica" letter-spacing="-0.1em"><tspan x="0" y="0">mongoose</tspan></text>
+  </g>
+</svg>

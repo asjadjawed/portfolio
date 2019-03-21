@@ -2,9 +2,10 @@ import React from "react";
 
 import "./AboutMe.scss";
 
-import Card from "../../Card/Card";
-
 import portrait from "../../../images/portrait.png";
+
+import TechIcon from "../../TechIcon/TechIcon";
+import skills from "./skills";
 
 export default function AboutMe() {
   return (
@@ -24,26 +25,32 @@ export default function AboutMe() {
             sapiente assumenda dicta iure veritatis.
           </p>
         </div>
-        <Card cardID="front-end" heading="Front-end" subheading="">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
-            illo.
-          </p>
-        </Card>
-        <Card cardID="back-end" heading="Back-end" subheading="">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-            aperiam, alias hic pariatur vel expedita culpa asperiores provident
-            voluptatibus possimus consequuntur magni ipsum quos quia
-            repudiandae? Dolorum impedit ipsa modi.
-          </p>
-        </Card>
-        <Card cardID="other" heading="Other" subheading="">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam,
-            libero.
-          </p>
-        </Card>
+      </div>
+      <div className="AboutMe--icons">
+        {/* {skills.backEnd.map(skill => (
+          <TechIcon
+            key={skill[0]}
+            name={skill[0]}
+            url={skill[1]}
+            image={skill[2]}
+          />
+        ))} */}
+        {/* {skills.devOps.map(skill => (
+          <TechIcon
+            key={skill[0]}
+            name={skill[0]}
+            url={skill[1]}
+            image={skill[2]}
+          />
+        ))} */}
+        {skills.frontEnd.map(skill => (
+          <TechIcon
+            key={skill[0]}
+            name={skill[0]}
+            url={skill[1]}
+            image={skill[2]}
+          />
+        ))}
       </div>
     </div>
   );

@@ -86,3 +86,11 @@
       "cfe cbe o";
   }
 }
+
+.AboutMe--icons {
+  background: lighten($primary-color, 5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,32 @@
+@import "../../config";
+
+$TechIcon-size: 75px;
+
+.TechIcon {
+  box-sizing: border-box;
+  width: $TechIcon-size;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &--icon {
+    display: block;
+    width: $TechIcon-size;
+    height: $TechIcon-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include transitionEase;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &--subtitle {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: setTextColor($primary-color);
+  }
+}
