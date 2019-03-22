@@ -183,7 +183,7 @@ export const projects: IProject[] = [
 ];
 
 // Generate Array of Unique Tags Sorted by Count
-const makeFlatUniqueCountSortedArray = (inputArray: string[]) => {
+export const makeFlatUniqueCountSortedArray = (inputArray: string[]) => {
   interface IElemCount {
     [key: string]: number;
   }

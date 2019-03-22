@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 
 import Project from "../../Project/Project";
-import { IProject, projects, tagsList } from "./projects";
+import {
+  IProject,
+  makeFlatUniqueCountSortedArray,
+  projects,
+  tagsList
+} from "./projects";
 
 import "./MyWork.scss";
 
@@ -16,7 +21,7 @@ const removeFromArray = (parentArray: string[], subArray: string[]) => {
     return subArray.indexOf(elem) === -1;
   });
 };
-const AddtoArray = (array: string[], value: string) => {
+const AddToArray = (array: string[], value: string) => {
   return [...array, value];
 };
 
@@ -53,19 +58,29 @@ export default class MyWork extends Component {
                   {
                     selectedTags: removeFromArray(this.state.selectedTags, [
                       e.currentTarget.textContent!
-                    ]),
-                    tagsList: AddtoArray(
-                      this.state.tagsList,
-                      e.currentTarget.textContent!
-                    )
+                    ])
                   },
                   () => {
-                    this.setState({
-                      projects: filterProjects(
-                        projects,
-                        this.state.selectedTags
-                      )
-                    });
+                    this.setState(
+                      {
+                        projects: filterProjects(
+                          projects,
+                          this.state.selectedTags
+                        )
+                      },
+                      () => {
+                        this.setState({
+                          tagsList: removeFromArray(
+                            makeFlatUniqueCountSortedArray(
+                              this.state.projects
+                                .flatMap(({ tags }) => tags)
+                                .sort()
+                            ),
+                            this.state.selectedTags
+                          )
+                        });
+                      }
+                    );
                   }
                 );
               }}
@@ -83,21 +98,32 @@ export default class MyWork extends Component {
               onClick={e => {
                 this.setState(
                   {
-                    selectedTags: AddtoArray(
+                    selectedTags: AddToArray(
                       this.state.selectedTags,
                       e.currentTarget.textContent!
-                    ),
-                    tagsList: removeFromArray(this.state.tagsList, [
-                      e.currentTarget.textContent!
-                    ])
+                    )
                   },
                   () => {
-                    this.setState({
-                      projects: filterProjects(
-                        projects,
-                        this.state.selectedTags
-                      )
-                    });
+                    this.setState(
+                      {
+                        projects: filterProjects(
+                          projects,
+                          this.state.selectedTags
+                        )
+                      },
+                      () => {
+                        this.setState({
+                          tagsList: removeFromArray(
+                            makeFlatUniqueCountSortedArray(
+                              this.state.projects
+                                .flatMap(({ tags }) => tags)
+                                .sort()
+                            ),
+                            this.state.selectedTags
+                          )
+                        });
+                      }
+                    );
                   }
                 );
               }}
