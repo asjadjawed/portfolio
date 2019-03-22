@@ -7,8 +7,8 @@
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   padding: 0 1rem;
-  border-left: 0.05rem solid $secondary-color;
-  border-right: 0.05rem solid $secondary-color;
+  border-left: 0.05rem solid setTextColor($primary-color);
+  border-right: 0.05rem solid setTextColor($primary-color);
 }
 
 .AboutMe {
@@ -72,6 +72,12 @@
     letter-spacing: 0.3rem;
   }
 
+  &--services {
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin: 3.5rem 0;
+  }
+
   &--skills {
     background: lighten($primary-color, 5);
     display: flex;
@@ -85,7 +91,7 @@
   }
 
   &--skillsBorder {
-    border: 0.05rem solid $secondary-color;
+    border: 0.05rem solid setTextColor($primary-color);
     border-radius: 0.5rem;
 
     &-frontEnd {

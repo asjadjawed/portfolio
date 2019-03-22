@@ -1,8 +1,11 @@
 @import "../../../config";
 
 .Home {
-  height: 60vh;
+  box-sizing: border-box;
+  position: absolute;
   display: flex;
+  height: calc(100vh - 100px);
+  margin: 1rem auto;
   flex-direction: column;
   justify-content: center;
 

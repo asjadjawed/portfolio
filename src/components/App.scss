@@ -4,7 +4,6 @@ body {
   background: $primary-color;
   font-family: $primary-font;
   color: setTextColor($primary-color);
-  min-height: 100vh;
   line-height: 1.5;
 }
 

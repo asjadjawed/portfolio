@@ -42,16 +42,11 @@ export default function AboutMe() {
       </div>
 
       <div className="AboutMe--skillsSection">
-        <h2 className="AboutMe--skillsSectionHeading AboutMe--text-secondaryColor">
-          Technical Skills
-        </h2>
+        <h2 className="AboutMe--skillsSectionHeading">Technical Skills</h2>
 
-        <p
-          className="AboutMe--text-secondaryColor"
-          style={{ textAlign: "center", letterSpacing: "2px" }}
-        >
+        <p className="AboutMe--services AboutMe--text-secondaryColor">
           <strong>
-            DESIGN / DEVELOP / DEPLOY / OPTIMIZE / CONSULT / TRAIN
+            ~ DESIGN / DEVELOP / DEPLOY / OPTIMIZE / CONSULT / TRAIN ~
           </strong>
         </p>
 

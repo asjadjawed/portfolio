@@ -16,12 +16,30 @@ export default function ContactMe() {
             &#109;&#101;&#64;&#97;&#115;&#106;&#97;&#100;&#46;&#100;&#101;&#118;
           </h3>
         </div>
+
         <div className="ContactMe--contact">
           <h3>
-            <span className="ContactMe--text-secondaryColor">Phone: </span>
-            +92 (333) 2168446
+            <span className="ContactMe--text-secondaryColor">Skype: </span>
+            asjadjawed
           </h3>
         </div>
+
+        <div className="ContactMe--contact">
+          <h3>
+            <span className="ContactMe--text-secondaryColor">Twitter: </span>
+            @asjadjawed
+          </h3>
+        </div>
+
+        <div className="ContactMe--contact">
+          <h3>
+            <span className="ContactMe--text-secondaryColor">
+              Cell / Whatsapp:{" "}
+            </span>
+            +92 (300) 8214696, +92 (333) 2168446
+          </h3>
+        </div>
+
         <div className="ContactMe--contact">
           <h3>
             <span className="ContactMe--text-secondaryColor">Address: </span>
