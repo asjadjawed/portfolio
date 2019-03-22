@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 import Project from "../../Project/Project";
+import { projects, tagsList } from "./projects";
 import {
-  IProject,
+  AddToArray,
   makeFlatUniqueCountSortedArray,
-  projects,
-  tagsList
-} from "./projects";
+  removeFromArray
+} from "./tagFunctions";
 
 import "./MyWork.scss";
 
@@ -16,21 +16,20 @@ interface IState {
   tagsList: string[];
 }
 
-const removeFromArray = (parentArray: string[], subArray: string[]) => {
-  return parentArray.filter(elem => {
-    return subArray.indexOf(elem) === -1;
-  });
-};
-const AddToArray = (array: string[], value: string) => {
-  return [...array, value];
-};
+export interface IProject {
+  description: string;
+  heading: string;
+  image: string;
+  liveLink: string;
+  projectID: string;
+  sourceLink: string;
+  tags: string[];
+}
 
-const filterProjects = (projectList: IProject[], inputTags: string[]) => {
-  return projectList.filter(({ tags }) =>
+export const filterProjects = (projectList: IProject[], inputTags: string[]) =>
+  projectList.filter(({ tags }) =>
     inputTags.every(inputTag => tags.includes(inputTag))
   );
-};
-
 export default class MyWork extends Component {
   public state: IState = {
     projects,

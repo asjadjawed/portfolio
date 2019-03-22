@@ -10,6 +10,9 @@ import AboutMe from "./Pages/AboutMe/AboutMe";
 import ContactMe from "./Pages/ContactMe/ContactMe";
 import Home from "./Pages/Home/Home";
 import MyWork from "./Pages/MyWork/MyWork";
+import Tech from "./Pages/Tech/Tech";
+
+import license from "../images/license.svg";
 
 class App extends Component {
   public render() {
@@ -23,21 +26,32 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={AboutMe} />
+              <Route exact path="/skills" component={Tech} />
               <Route path="/contact" component={ContactMe} />
               <Route path="/work" component={MyWork} />
             </Switch>
           </main>
           <footer>
+            <small>
+              <em>
+                This work is licensed under Creative Commons Attribution 4.0
+                International License
+              </em>
+            </small>
             <a
-              className="App--license"
               rel="license"
-              href="http://creativecommons.org/licenses/by-nc/4.0/"
+              href="http://creativecommons.org/licenses/by/4.0/"
               target="_blank"
             >
               <img
                 alt="Creative Commons License"
-                style={{ borderWidth: 0 }}
-                src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"
+                style={{
+                  borderWidth: "0",
+                  display: "block",
+                  margin: "10px",
+                  width: "75%"
+                }}
+                src={license}
               />
             </a>
           </footer>

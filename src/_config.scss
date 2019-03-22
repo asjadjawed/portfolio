@@ -1,12 +1,25 @@
-@function setTextColor($color) {
-  @if (lightness($color) > 50) {
-    @return #111;
-  } @else {
-    @return #eee;
-  }
-}
+$colors: (
+  aqua: #7fdbff,
+  blue: #0074d9,
+  lime: #01ff70,
+  navy: #001f3f,
+  teal: #39cccc,
+  olive: #3d9970,
+  green: #2ecc40,
+  red: #ff4136,
+  maroon: #85144b,
+  orange: #ff851b,
+  purple: #b10dc9,
+  yellow: #ffdc00,
+  fuchsia: #f012be,
+  gray: #aaaaaa,
+  white: #ffffff,
+  black: #111111,
+  silver: #dddddd
+);
 
-$primary-color: #eee;
+$primary-color: #fff;
+// $secondary-color: map-get($colors, red);
 $secondary-color: orangered;
 
 @import url("https://fonts.googleapis.com/css?family=Scope+One");
@@ -15,11 +28,15 @@ $primary-font: "Scope One", serif;
 @mixin heading {
   font-size: 6rem;
   font-weight: 400;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem;
+  line-height: 1;
 }
 
 @mixin subheading {
   font-weight: 400;
+  margin: 1rem 0;
+  line-height: 1;
+  padding: 1rem 0;
   margin: 1rem 0;
 }
 
@@ -31,14 +48,21 @@ $primary-font: "Scope One", serif;
   color: $secondary-color;
 }
 
+@function setTextColor($color) {
+  @if (lightness($color) > 50) {
+    @return #111;
+  } @else {
+    @return #eee;
+  }
+}
+
 $showBackground: false;
-$backgroundImage: url("/images/background.jpg");
 $background-opacity: 0.8;
 
 @mixin background {
   @if $showBackground {
     body {
-      background: $backgroundImage;
+      background: url("./images/background.jpg");
       background-size: cover;
 
       &::after {

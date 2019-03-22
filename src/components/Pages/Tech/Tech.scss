@@ -1,0 +1,101 @@
+@import "../../../config";
+
+@mixin skillsHeading {
+  font-size: 1.05rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0 1rem;
+  border: 0.05rem solid setTextColor($primary-color);
+  border-radius: 1rem;
+}
+
+.Tech {
+  margin-bottom: 5rem;
+
+  &--heading {
+    @include heading;
+  }
+
+  &--subHeading {
+    @include subheading;
+  }
+
+  &--text-secondaryColor {
+    @include secondaryColor;
+  }
+
+  &--services {
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin: 3rem;
+  }
+
+  &--skillsSection {
+    padding: 2rem;
+  }
+
+  &--skillsGrid {
+    display: grid;
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  &--skillsHeading {
+    @include skillsHeading;
+    background: lighten($primary-color, 5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &--skillsBorder {
+    border: 0.05rem solid setTextColor($primary-color);
+    background: lighten($primary-color, 5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 0.5rem;
+
+    &-frontEnd {
+      grid-area: fe;
+    }
+
+    &-backEnd {
+      grid-area: be;
+    }
+
+    &-devOps {
+      grid-area: do;
+    }
+  }
+
+  &--skills {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@include mediaSmall {
+  .Tech--skillsGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "fe"
+      "be"
+      "do";
+  }
+}
+
+@include mediaLarge {
+  .Tech--skillsGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "fe be"
+      "do do";
+  }
+}
+
+@include mediaXLarge {
+  .Tech--skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "fe be do";
+  }
+}

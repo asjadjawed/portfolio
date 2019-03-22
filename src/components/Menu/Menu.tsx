@@ -58,6 +58,16 @@ export default class Menu extends Component {
               </li>
               <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
                 <NavLink
+                  to="/skills"
+                  activeClassName="Menu--link-selected"
+                  className="Menu--link"
+                  onClick={() => this.setState({ active: false })}
+                >
+                  Services & Tech
+                </NavLink>
+              </li>
+              <li className={active ? "Menu--li Menu--li-active" : "Menu--li"}>
+                <NavLink
                   to="/work"
                   activeClassName="Menu--link-selected"
                   className="Menu--link"

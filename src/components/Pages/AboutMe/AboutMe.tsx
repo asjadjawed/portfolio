@@ -4,9 +4,6 @@ import "./AboutMe.scss";
 
 import portrait from "../../../images/portrait.png";
 
-import TechIcon from "../../TechIcon/TechIcon";
-import skills from "./skills";
-
 export default function AboutMe() {
   return (
     <div className="AboutMe">
@@ -39,65 +36,6 @@ export default function AboutMe() {
             Node.js) stack as well as others.
           </p>
         </div>
-      </div>
-
-      <div className="AboutMe--skillsSection">
-        <h2 className="AboutMe--skillsSectionHeading">Technical Skills</h2>
-
-        <p className="AboutMe--services AboutMe--text-secondaryColor">
-          <strong>
-            ~ DESIGN / DEVELOP / DEPLOY / OPTIMIZE / CONSULT / TRAIN ~
-          </strong>
-        </p>
-
-        <div className="AboutMe--skillsGrid">
-          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-frontEnd">
-            <legend className="AboutMe--skillsHeading">Front-End</legend>
-            <div className="AboutMe--skills">
-              {skills.frontEnd.map(skill => (
-                <TechIcon
-                  key={skill[0]}
-                  name={skill[0]}
-                  url={skill[1]}
-                  image={skill[2]}
-                />
-              ))}
-            </div>
-          </fieldset>
-
-          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-backEnd">
-            <legend className="AboutMe--skillsHeading">Back-End</legend>
-            <div className="AboutMe--skills">
-              {skills.backEnd.map(skill => (
-                <TechIcon
-                  key={skill[0]}
-                  name={skill[0]}
-                  url={skill[1]}
-                  image={skill[2]}
-                />
-              ))}
-            </div>
-          </fieldset>
-
-          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-devOps">
-            <legend className="AboutMe--skillsHeading">Dev-Ops / Other</legend>
-            <div className="AboutMe--skills">
-              {skills.devOps.map(skill => (
-                <TechIcon
-                  key={skill[0]}
-                  name={skill[0]}
-                  url={skill[1]}
-                  image={skill[2]}
-                />
-              ))}
-            </div>
-          </fieldset>
-        </div>
-        <small
-          style={{ marginTop: "1rem", display: "block", textAlign: "right" }}
-        >
-          i <span style={{ color: "#f00" }}>&hearts;</span> open-source.{" "}
-        </small>
       </div>
     </div>
   );

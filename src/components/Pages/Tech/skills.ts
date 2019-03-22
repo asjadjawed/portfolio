@@ -91,7 +91,7 @@ const skills = {
     ["Jest", "https://jestjs.io/", jestIcon],
     ["ESLint", "https://eslint.org/", esLintIcon],
     ["TSLint", "https://palantir.github.io/tslint/", tsLintIcon],
-    ["Digital Ocean", "https://www.digitalocean.com/", digitalOceanIcon],
+    ["DigitalOcean", "https://www.digitalocean.com/", digitalOceanIcon],
     ["Heroku", "https://www.heroku.com/", herokuIcon],
     ["VirtualBox", "https://www.virtualbox.org/wiki/Downloads", virtualBoxIcon],
     ["VS Code", "https://code.visualstudio.com/", visualStudioCodeIcon]

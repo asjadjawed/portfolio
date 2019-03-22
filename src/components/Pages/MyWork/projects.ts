@@ -1,3 +1,5 @@
+import { makeFlatUniqueCountSortedArray } from "./tagFunctions";
+
 import faceRecognitionThumb from "../../../images/projects/face-recognition.jpg";
 import galleryThumb from "../../../images/projects/gallery.jpg";
 import gradientThumb from "../../../images/projects/gradient.jpg";
@@ -8,17 +10,8 @@ import roboThumb from "../../../images/projects/robo-inc.jpg";
 import shoppingThumb from "../../../images/projects/shopping.jpg";
 import todoThumb from "../../../images/projects/todo.jpg";
 import weatherThumb from "../../../images/projects/weather.jpg";
-export interface IProject {
-  description: string;
-  heading: string;
-  image: string;
-  liveLink: string;
-  projectID: string;
-  sourceLink: string;
-  tags: string[];
-}
 
-export const projects: IProject[] = [
+export const projects = [
   {
     description: "Portfolio website built with React + TypeScript + Sass.",
     heading: "My Website",
@@ -67,23 +60,6 @@ export const projects: IProject[] = [
   },
   {
     description:
-      "Dynamic Single Page App built with TypeScript OOP stores tasks in browser localStorage. No frameworks used.",
-    heading: "Todo App",
-    image: todoThumb,
-    liveLink: "https://asjad.dev/todo-list/",
-    projectID: "todo",
-    sourceLink: "https://github.com/asjadjawed/todo-list",
-    tags: [
-      "HTML5",
-      "CSS3",
-      "TypeScript",
-      "Web Storage API",
-      "todo",
-      "zero frameworks"
-    ]
-  },
-  {
-    description:
       "Uses MapQuest + DarkSky API (async requests) running on Express & Handlebars on Heroku.",
     heading: "Weather Server",
     image: weatherThumb,
@@ -106,16 +82,6 @@ export const projects: IProject[] = [
   },
   {
     description:
-      "Gradient generator - provides CSS linear gradient values. Vanilla JS + HTML5 + CSS3.",
-    heading: "Gradient Generator",
-    image: gradientThumb,
-    liveLink: "https://asjad.dev/gradient-generator/",
-    projectID: "gradient",
-    sourceLink: "https://github.com/asjadjawed/gradient-generator",
-    tags: ["HTML5", "CSS3", "JavaScript", "gradients"]
-  },
-  {
-    description:
       "The Best Corporate Robots (doing ... something?!) Built with React, RoboHash API & Faker.",
     heading: "Robo Inc.",
     image: roboThumb,
@@ -131,6 +97,26 @@ export const projects: IProject[] = [
       "faker",
       "funny"
     ]
+  },
+  {
+    description:
+      "Gradient generator - provides CSS linear gradient values. Vanilla JS + HTML5 + CSS3.",
+    heading: "Gradient Generator",
+    image: gradientThumb,
+    liveLink: "https://asjad.dev/gradient-generator/",
+    projectID: "gradient",
+    sourceLink: "https://github.com/asjadjawed/gradient-generator",
+    tags: ["HTML5", "CSS3", "JavaScript", "gradients"]
+  },
+  {
+    description:
+      "Dynamic Single Page App built with TypeScript OOP stores tasks in browser localStorage.",
+    heading: "Todo App",
+    image: todoThumb,
+    liveLink: "https://asjad.dev/todo-list/",
+    projectID: "todo",
+    sourceLink: "https://github.com/asjadjawed/todo-list",
+    tags: ["HTML5", "CSS3", "TypeScript", "Web Storage API", "todo"]
   },
   {
     description:
@@ -155,20 +141,13 @@ export const projects: IProject[] = [
   },
   {
     description:
-      "Single Page App built with Vanilla JS & OOP stores via browser localStorage. No frameworks used.",
+      "Single Page App built with Vanilla JS & OOP stores via browser localStorage.",
     heading: "Shopping List",
     image: shoppingThumb,
     liveLink: "https://asjad.dev/shopping-list/",
     projectID: "shopping",
     sourceLink: "https://github.com/asjadjawed/shopping-list",
-    tags: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "Web Storage API",
-      "zero frameworks",
-      "list"
-    ]
+    tags: ["HTML5", "CSS3", "JavaScript", "Web Storage API", "list"]
   },
   {
     description:
@@ -181,25 +160,6 @@ export const projects: IProject[] = [
     tags: ["HTML5", "CSS3", "UnSplash API", "gallery"]
   }
 ];
-
-// Generate Array of Unique Tags Sorted by Count
-export const makeFlatUniqueCountSortedArray = (inputArray: string[]) => {
-  interface IElemCount {
-    [key: string]: number;
-  }
-
-  const ElemCount: IElemCount = {};
-
-  inputArray.forEach(element => {
-    if (!ElemCount[element]) {
-      Object.assign(ElemCount, { [element]: 1 });
-    } else {
-      Object.assign(ElemCount, { [element]: ElemCount[element] + 1 });
-    }
-  });
-
-  return Object.keys(ElemCount).sort((a, b) => ElemCount[b] - ElemCount[a]);
-};
 
 export const tagsList = makeFlatUniqueCountSortedArray(
   projects.flatMap(({ tags }) => tags).sort()

@@ -1,16 +1,5 @@
 @import "../../../config";
 
-@mixin skillsHeading {
-  font-size: 1.05rem;
-  text-align: center;
-  // font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  padding: 0 1rem;
-  border-left: 0.05rem solid setTextColor($primary-color);
-  border-right: 0.05rem solid setTextColor($primary-color);
-}
-
 .AboutMe {
   margin-bottom: 5rem;
 
@@ -28,9 +17,9 @@
 
   &--main {
     max-width: 1100px;
-    margin: 1rem auto;
+    margin: 0 auto;
     display: grid;
-    grid-gap: 0rem 2.5rem;
+    grid-gap: 0rem 1rem;
     align-items: center;
     justify-items: center;
   }
@@ -38,6 +27,7 @@
   &--gridHeading {
     grid-area: gh;
     justify-self: left;
+    margin: 0;
   }
 
   &--image {
@@ -54,58 +44,6 @@
     grid-area: bio;
     text-align: left;
   }
-
-  &--skillsGrid {
-    display: grid;
-    grid-gap: 1.5rem;
-    margin-top: 2rem;
-  }
-
-  &--skillsSection {
-    background: lighten($primary-color, 5);
-    padding: 2rem;
-  }
-
-  &--skillsSectionHeading {
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.3rem;
-  }
-
-  &--services {
-    text-align: center;
-    letter-spacing: 0.3rem;
-    margin: 3.5rem 0;
-  }
-
-  &--skills {
-    background: lighten($primary-color, 5);
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-
-  &--skillsHeading {
-    @include skillsHeading;
-  }
-
-  &--skillsBorder {
-    border: 0.05rem solid setTextColor($primary-color);
-    border-radius: 0.5rem;
-
-    &-frontEnd {
-      grid-area: fe;
-    }
-
-    &-backEnd {
-      grid-area: be;
-    }
-
-    &-devOps {
-      grid-area: do;
-    }
-  }
 }
 
 @include mediaSmall {
@@ -116,14 +54,6 @@
       "gh"
       "bio";
   }
-
-  .AboutMe--skillsGrid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "fe"
-      "be"
-      "do";
-  }
 }
 
 @include mediaLarge {
@@ -133,13 +63,6 @@
       ". gh ."
       "portrait bio bio";
   }
-
-  .AboutMe--skillsGrid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "fe be"
-      "do do";
-  }
 }
 
 @include mediaXLarge {
@@ -148,10 +71,5 @@
     grid-template-areas:
       ". gh ."
       "portrait bio bio";
-  }
-
-  .AboutMe--skillsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "fe be do";
   }
 }
