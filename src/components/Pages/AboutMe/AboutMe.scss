@@ -1,12 +1,14 @@
 @import "../../../config";
 
 @mixin skillsHeading {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   text-align: center;
-  background: $secondary-color;
-  color: setTextColor($secondary-color);
-  padding: 0.3rem 1.5rem;
-  border-radius: 1rem;
+  // font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0 1rem;
+  border-left: 0.05rem solid $secondary-color;
+  border-right: 0.05rem solid $secondary-color;
 }
 
 .AboutMe {
@@ -53,6 +55,12 @@
     text-align: left;
   }
 
+  &--skillsGrid {
+    display: grid;
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
   &--skillsSection {
     background: lighten($primary-color, 5);
     padding: 2rem;
@@ -77,9 +85,20 @@
   }
 
   &--skillsBorder {
-    border: 0.15rem solid $secondary-color;
-    border-radius: 1rem;
-    margin: 2rem 0rem 5rem;
+    border: 0.05rem solid $secondary-color;
+    border-radius: 0.5rem;
+
+    &-frontEnd {
+      grid-area: fe;
+    }
+
+    &-backEnd {
+      grid-area: be;
+    }
+
+    &-devOps {
+      grid-area: do;
+    }
   }
 }
 
@@ -91,6 +110,14 @@
       "gh"
       "bio";
   }
+
+  .AboutMe--skillsGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "fe"
+      "be"
+      "do";
+  }
 }
 
 @include mediaLarge {
@@ -100,6 +127,13 @@
       ". gh ."
       "portrait bio bio";
   }
+
+  .AboutMe--skillsGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "fe be"
+      "do do";
+  }
 }
 
 @include mediaXLarge {
@@ -108,5 +142,10 @@
     grid-template-areas:
       ". gh ."
       "portrait bio bio";
+  }
+
+  .AboutMe--skillsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "fe be do";
   }
 }

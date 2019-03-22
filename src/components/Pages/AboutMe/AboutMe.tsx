@@ -21,21 +21,23 @@ export default function AboutMe() {
         <img src={portrait} alt="Asjad" className="AboutMe--image" />
         <div className="AboutMe--bio">
           <p>
-            I am a Management Accountant (IMA-USA) turned{" "}
-            <strong>Full-Stack Developer</strong> from Karachi. My first
-            programming experience was with GW-BASIC on an Intel 286 back in the{" "}
+            I am an Accountant (IMA-USA) turned{" "}
+            <strong>Full-Stack Developer</strong> . My first programming
+            experience, as a kid, was with GW-BASIC on an Intel 286 back in the{" "}
             <strong>90s</strong>. (
             <em>Computer have come a long way since...</em>).
           </p>
           <p>
-            During my career, I have provided companies with in-house tech
-            solutions for accounting, finance, inventory management etc. (
-            <em>in addition to accounting services</em>). In{" "}
-            <strong>2018</strong>, I decided to follow my passion as a career,
-            and started learning best industry / programming practices and the
-            latest in-demand tech. I hope to keep on improving and learning.
+            I have provided companies with in-house tech solutions for
+            accounting, finance, inventory management etc. (
+            <em>in addition to accounting services</em>).
           </p>
-          <p />
+          <p>
+            My skill set allows me to work with the widely popular{" "}
+            <strong>LAMP</strong> (Linux / Apache / MySQL / PHP) stack, the
+            cutting-edge <strong>MERN</strong> (MongoDB / Express / React /
+            Node.js) stack as well as others.
+          </p>
         </div>
       </div>
 
@@ -43,70 +45,59 @@ export default function AboutMe() {
         <h2 className="AboutMe--skillsSectionHeading AboutMe--text-secondaryColor">
           Technical Skills
         </h2>
-        <p>
-          As a <strong>Full-Stack developer</strong> I can help develop a
-          project right from the <em>design</em> and mockup stage through
-          (test-driven) <em>development</em> (both front-end and back-end) and
-          up to final <em>deployment</em> of the project. I try to learn skills
-          that can help me meet the demands of most project development stacks.
-          This allows me to work with the widely popular <strong>LAMP</strong>{" "}
-          (Linux / Apache / MySQL / PHP) stack, the cutting-edge{" "}
-          <strong>MERN</strong> (MongoDB / Express / React / Node.js) stack as
-          well as others in between.
+
+        <p
+          className="AboutMe--text-secondaryColor"
+          style={{ textAlign: "center", letterSpacing: "2px" }}
+        >
+          <strong>
+            DESIGN / DEVELOP / DEPLOY / OPTIMIZE / CONSULT / TRAIN
+          </strong>
         </p>
 
-        <p>
-          In addition to this I can consult in selecting the best technologies
-          to provide an optimal solution. I also conduct training sessions for
-          people looking to upgrade their skills.
-        </p>
+        <div className="AboutMe--skillsGrid">
+          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-frontEnd">
+            <legend className="AboutMe--skillsHeading">Front-End</legend>
+            <div className="AboutMe--skills">
+              {skills.frontEnd.map(skill => (
+                <TechIcon
+                  key={skill[0]}
+                  name={skill[0]}
+                  url={skill[1]}
+                  image={skill[2]}
+                />
+              ))}
+            </div>
+          </fieldset>
 
-        <p>
-          Below are some of the Programming Languages / Frameworks / Libraries /
-          Tools I have experience in:
-        </p>
+          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-backEnd">
+            <legend className="AboutMe--skillsHeading">Back-End</legend>
+            <div className="AboutMe--skills">
+              {skills.backEnd.map(skill => (
+                <TechIcon
+                  key={skill[0]}
+                  name={skill[0]}
+                  url={skill[1]}
+                  image={skill[2]}
+                />
+              ))}
+            </div>
+          </fieldset>
 
-        <fieldset className="AboutMe--skillsBorder">
-          <legend className="AboutMe--skillsHeading">Front-End</legend>
-          <div className="AboutMe--skills AboutMe--skills-frontEnd">
-            {skills.frontEnd.map(skill => (
-              <TechIcon
-                key={skill[0]}
-                name={skill[0]}
-                url={skill[1]}
-                image={skill[2]}
-              />
-            ))}
-          </div>
-        </fieldset>
-
-        <fieldset className="AboutMe--skillsBorder">
-          <legend className="AboutMe--skillsHeading">Back-End</legend>
-          <div className="AboutMe--skills AboutMe--skills-backEnd">
-            {skills.backEnd.map(skill => (
-              <TechIcon
-                key={skill[0]}
-                name={skill[0]}
-                url={skill[1]}
-                image={skill[2]}
-              />
-            ))}
-          </div>
-        </fieldset>
-
-        <fieldset className="AboutMe--skillsBorder">
-          <legend className="AboutMe--skillsHeading">DevOps & Other</legend>
-          <div className="AboutMe--skills AboutMe--skills-devOps">
-            {skills.devOps.map(skill => (
-              <TechIcon
-                key={skill[0]}
-                name={skill[0]}
-                url={skill[1]}
-                image={skill[2]}
-              />
-            ))}
-          </div>
-        </fieldset>
+          <fieldset className="AboutMe--skillsBorder AboutMe--skillsBorder-devOps">
+            <legend className="AboutMe--skillsHeading">Dev-Ops / Other</legend>
+            <div className="AboutMe--skills">
+              {skills.devOps.map(skill => (
+                <TechIcon
+                  key={skill[0]}
+                  name={skill[0]}
+                  url={skill[1]}
+                  image={skill[2]}
+                />
+              ))}
+            </div>
+          </fieldset>
+        </div>
       </div>
     </div>
   );
