@@ -93,6 +93,11 @@ export default function AboutMe() {
             </div>
           </fieldset>
         </div>
+        <small
+          style={{ marginTop: "1rem", display: "block", textAlign: "right" }}
+        >
+          i <span style={{ color: "#f00" }}>&hearts;</span> open-source.{" "}
+        </small>
       </div>
     </div>
   );

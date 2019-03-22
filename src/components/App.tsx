@@ -28,7 +28,18 @@ class App extends Component {
             </Switch>
           </main>
           <footer>
-            Copyright &copy; {new Date().getFullYear()}. All rights reserved.
+            <a
+              className="App--license"
+              rel="license"
+              href="http://creativecommons.org/licenses/by-nc/4.0/"
+              target="_blank"
+            >
+              <img
+                alt="Creative Commons License"
+                style={{ borderWidth: 0 }}
+                src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png"
+              />
+            </a>
           </footer>
         </div>
       </Router>

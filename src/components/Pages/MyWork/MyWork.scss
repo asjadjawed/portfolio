@@ -1,5 +1,15 @@
 @import "../../../config";
 
+@mixin tags {
+  display: inline-block;
+  background: lighten($primary-color, 5);
+  color: setTextColor($primary-color);
+  margin: 0.3rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
 .MyWork {
   margin-bottom: 5rem;
 
@@ -15,41 +25,24 @@
     @include secondaryColor;
   }
 
-  &--search {
-    display: block;
-    width: 75%;
-    text-align: center;
-    max-width: 600px;
-    margin: 3rem auto;
-    line-height: 1.5;
-    padding: 1.3rem 1.5rem 1rem;
-    background: lighten($primary-color, 5);
-    color: setTextColor($primary-color);
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    border-bottom: 0.3rem solid lighten($primary-color, 5);
-    @include transitionEase;
-
-    &:hover,
-    &:focus {
-      border-bottom: 0.3rem solid $secondary-color;
-    }
-  }
-
   &--suggestions {
     text-align: center;
   }
 
   &--tag {
-    display: inline-block;
+    @include tags;
+    @include transitionEase;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--selectedTag {
+    @include tags;
+    @include transitionEase;
     background: $secondary-color;
     color: setTextColor($secondary-color);
-    margin: 0.3rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    @include transitionEase;
 
     &:hover {
       transform: scale(1.1);

@@ -8,7 +8,7 @@ import roboThumb from "../../../images/projects/robo-inc.jpg";
 import shoppingThumb from "../../../images/projects/shopping.jpg";
 import todoThumb from "../../../images/projects/todo.jpg";
 import weatherThumb from "../../../images/projects/weather.jpg";
-interface IProject {
+export interface IProject {
   description: string;
   heading: string;
   image: string;
@@ -16,9 +16,6 @@ interface IProject {
   projectID: string;
   sourceLink: string;
   tags: string[];
-}
-interface IObjectCount {
-  [key: string]: number;
 }
 
 export const projects: IProject[] = [
@@ -185,23 +182,25 @@ export const projects: IProject[] = [
   }
 ];
 
-export const makeFlatUniqueCountSortedArray = (inputArray: IProject[]) => {
-  const objectCount: IObjectCount = {};
+// Generate Array of Unique Tags Sorted by Count
+const makeFlatUniqueCountSortedArray = (inputArray: string[]) => {
+  interface IElemCount {
+    [key: string]: number;
+  }
 
-  inputArray
-    .flatMap(({ tags }) => tags)
-    .sort()
-    .forEach(element => {
-      if (!objectCount[element]) {
-        Object.assign(objectCount, { [element]: 1 });
-      } else {
-        Object.assign(objectCount, { [element]: objectCount[element] + 1 });
-      }
-    });
+  const ElemCount: IElemCount = {};
 
-  return Object.keys(objectCount).sort(
-    (a, b) => objectCount[b] - objectCount[a]
-  );
+  inputArray.forEach(element => {
+    if (!ElemCount[element]) {
+      Object.assign(ElemCount, { [element]: 1 });
+    } else {
+      Object.assign(ElemCount, { [element]: ElemCount[element] + 1 });
+    }
+  });
+
+  return Object.keys(ElemCount).sort((a, b) => ElemCount[b] - ElemCount[a]);
 };
 
-export const tagsList = makeFlatUniqueCountSortedArray(projects);
+export const tagsList = makeFlatUniqueCountSortedArray(
+  projects.flatMap(({ tags }) => tags).sort()
+);

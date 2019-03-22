@@ -12,14 +12,17 @@ footer {
   bottom: 0;
   background: darken($primary-color, 5);
   width: 100%;
-  margin: 0;
-  padding: 0.75rem;
-  box-sizing: border-box;
+  height: 3rem;
   opacity: 0.9;
-  margin-top: 5rem;
-  font-weight: 100;
   color: darken((setTextColor($primary-color)), 5);
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.App--license {
+  display: block;
+  padding-right: 1rem;
 }
 
 @include background;
@@ -43,10 +46,6 @@ Anything in small query carries to the largest unless over-ridden
   main {
     text-align: left;
     padding: 0 2rem;
-  }
-
-  footer {
-    text-align: right;
   }
 }
 
