@@ -1,14 +1,12 @@
 @import "../../../config";
 
 .Home {
-  // box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   display: flex;
   width: 100vw;
-  height: 85vh;
-  margin: 1rem auto;
+  height: 75vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;

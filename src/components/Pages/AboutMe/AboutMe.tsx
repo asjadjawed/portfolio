@@ -21,13 +21,12 @@ export default function AboutMe() {
             I am an Accountant (IMA-USA) turned{" "}
             <strong>Full-Stack Developer</strong> . My first programming
             experience, as a kid, was with GW-BASIC on an Intel 286 back in the{" "}
-            <strong>90s</strong>. (
-            <em>Computer have come a long way since...</em>).
+            <strong>90s</strong>. ( Computer have come a long way since...).
           </p>
           <p>
             I have provided companies with in-house tech solutions for
-            accounting, finance, inventory management etc. (
-            <em>in addition to accounting services</em>).
+            accounting, finance, inventory management etc. ( in addition to
+            accounting services).
           </p>
           <p>
             My skill set allows me to work with the widely popular{" "}

@@ -33,7 +33,7 @@ class App extends Component {
           </main>
           <footer>
             <small>
-              <em>Licensed under CC BY 4.0</em>
+              Licensed under CC BY 4.0
             </small>
             <a
               rel="license"

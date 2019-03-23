@@ -18,16 +18,16 @@ $colors: (
   silver: #dddddd
 );
 
-$primary-color: #333;
+$primary-color: #444;
 $secondary-color: map-get($colors, red);
 
-@import url("https://fonts.googleapis.com/css?family=Scope+One");
-$primary-font: "Scope One", serif;
+@import url("https://fonts.googleapis.com/css?family=Abel");
+$primary-font: "Abel", serif;
 
 @mixin heading {
   font-size: 4.5rem;
   font-weight: 400;
-  margin: 3rem 0 1rem;
+  margin: 3rem 0 0;
   line-height: 1;
 }
 
@@ -35,12 +35,12 @@ $primary-font: "Scope One", serif;
   font-weight: bold;
   margin: 1rem 0;
   line-height: 1.5;
-  padding: 1rem 0;
-  margin: 1rem 0;
+  // padding: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 @mixin emphasisText {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 @mixin secondaryColor {

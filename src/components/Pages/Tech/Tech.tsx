@@ -9,7 +9,7 @@ export default function Tech() {
   return (
     <div className="Tech">
       <h1 className="Tech--heading">
-        Services <span className="Tech--text-secondaryColor">& Tech</span>
+        Services &amp;<span className="Tech--text-secondaryColor"> Tech</span>
       </h1>
       <h2 className="Tech--subHeading">I can help you..</h2>
 
@@ -20,7 +20,7 @@ export default function Tech() {
       <div className="Tech--skillsSection">
         <div className="Tech--skillsGrid">
           <fieldset className="Tech--skillsBorder Tech--skillsBorder-frontEnd">
-            <legend className="Tech--skillsHeading">Front-End</legend>
+            <legend className="Tech--skillsHeading">-Front-End-</legend>
             <div className="Tech--skills">
               {skills.frontEnd.map(skill => (
                 <TechIcon
@@ -34,7 +34,7 @@ export default function Tech() {
           </fieldset>
 
           <fieldset className="Tech--skillsBorder Tech--skillsBorder-backEnd">
-            <legend className="Tech--skillsHeading">Back-End</legend>
+            <legend className="Tech--skillsHeading">-Back-End-</legend>
             <div className="Tech--skills">
               {skills.backEnd.map(skill => (
                 <TechIcon
@@ -48,7 +48,7 @@ export default function Tech() {
           </fieldset>
 
           <fieldset className="Tech--skillsBorder Tech--skillsBorder-devOps">
-            <legend className="Tech--skillsHeading">Dev-Ops / Other</legend>
+            <legend className="Tech--skillsHeading">-Dev-Ops | Other-</legend>
             <div className="Tech--skills">
               {skills.devOps.map(skill => (
                 <TechIcon
