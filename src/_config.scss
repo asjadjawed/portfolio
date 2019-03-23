@@ -18,9 +18,9 @@ $colors: (
   silver: #dddddd
 );
 
-$primary-color: #fff;
-// $secondary-color: map-get($colors, red);
-$secondary-color: orangered;
+$primary-color: #222;
+$secondary-color: map-get($colors, red);
+// $secondary-color: #f00;
 
 @import url("https://fonts.googleapis.com/css?family=Scope+One");
 $primary-font: "Scope One", serif;

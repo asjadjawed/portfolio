@@ -46,6 +46,7 @@
     background: $secondary-color;
     color: setTextColor($secondary-color);
     transform: scale(1.1);
+    font-weight: bold;
     margin: 0.35rem;
 
     &:hover {

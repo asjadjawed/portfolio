@@ -30,7 +30,7 @@ body::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: orangered;
+  background-color: $secondary-color;
 }
 
 .App--license {

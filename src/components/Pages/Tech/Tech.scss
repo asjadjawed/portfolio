@@ -2,11 +2,11 @@
 
 @mixin skillsHeading {
   font-size: 1.05rem;
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   padding: 0 1rem;
-  border: 0.05rem solid setTextColor($primary-color);
 }
 
 .Tech {
@@ -39,14 +39,15 @@
   &--skillsHeading {
     @include skillsHeading;
     background: lighten($primary-color, 5);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   }
 
   &--skillsBorder {
-    border: 0.05rem solid setTextColor($primary-color);
+    border: none;
     background: lighten($primary-color, 5);
+    border-bottom: 0.3rem solid $secondary-color;
+    border-top: 0.3rem solid $secondary-color;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 0.5rem;
 
     &-frontEnd {
       grid-area: fe;

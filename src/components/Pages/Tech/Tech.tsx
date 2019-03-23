@@ -2,8 +2,6 @@ import React from "react";
 
 import "./Tech.scss";
 
-import portrait from "../../../images/portrait.png";
-
 import TechIcon from "../../TechIcon/TechIcon";
 import skills from "./skills";
 
@@ -15,9 +13,9 @@ export default function Tech() {
       </h1>
       <h2 className="Tech--subHeading">I can help you..</h2>
 
-      <h3 className="Tech--services Tech--text-secondaryColor">
-        <strong> DESIGN DEVELOP DEPLOY OPTIMIZE CONSULT TRAIN </strong>
-      </h3>
+      <h2 className="Tech--services Tech--text-secondaryColor">
+        <strong>DESIGN DEVELOP DEPLOY OPTIMIZE CONSULT TRAIN</strong>
+      </h2>
 
       <div className="Tech--skillsSection">
         <div className="Tech--skillsGrid">

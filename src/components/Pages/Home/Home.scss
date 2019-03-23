@@ -15,6 +15,7 @@
 
   &--heading {
     @include heading;
+    margin-bottom: 0rem;
   }
 
   &--subHeading {
