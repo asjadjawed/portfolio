@@ -36,8 +36,8 @@
   }
 
   &--portrait {
-    width: 25vh;
-    height: 25vh;
+    width: 20vh;
+    height: 20vh;
     border-radius: 50%;
     background: url("../../images/portrait.png");
     border: solid 0.3rem $secondary-color;
@@ -53,17 +53,18 @@
   }
 
   &--ul {
+    box-sizing: border-box;
     list-style: none;
+    height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 4rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 
   &--li {
-    padding: 1rem;
     transform: translate(300rem);
     @include transitionEase;
 

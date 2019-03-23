@@ -7,7 +7,6 @@
   letter-spacing: 0.2rem;
   padding: 0 1rem;
   border: 0.05rem solid setTextColor($primary-color);
-  border-radius: 1rem;
 }
 
 .Tech {
@@ -29,10 +28,6 @@
     text-align: center;
     letter-spacing: 0.3rem;
     margin: 3rem;
-  }
-
-  &--skillsSection {
-    padding: 2rem;
   }
 
   &--skillsGrid {
@@ -93,9 +88,9 @@
   }
 }
 
-@include mediaXLarge {
-  .Tech--skillsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "fe be do";
-  }
-}
+// @include mediaXLarge {
+//   .Tech--skillsGrid {
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-areas: "fe be do";
+//   }
+// }

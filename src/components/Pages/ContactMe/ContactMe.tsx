@@ -31,7 +31,7 @@ export default function ContactMe() {
           </h3>
         </div>
 
-        <div className="ContactMe--contact">
+        {/* <div className="ContactMe--contact">
           <h3>
             <span className="ContactMe--text-secondaryColor">
               Cell / Whatsapp:{" "}
@@ -45,7 +45,7 @@ export default function ContactMe() {
             <span className="ContactMe--text-secondaryColor">Address: </span>
             Suite#206, PECHS Community Center, PECHS - 2, KHI - PK
           </h3>
-        </div>
+        </div> */}
       </div>
     </div>
   );

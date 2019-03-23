@@ -16,9 +16,7 @@ export default function Tech() {
       <h2 className="Tech--subHeading">I can help you..</h2>
 
       <h3 className="Tech--services Tech--text-secondaryColor">
-        <strong>
-          ~ DESIGN / DEVELOP / DEPLOY / OPTIMIZE / CONSULT / TRAIN ~
-        </strong>
+        <strong> DESIGN DEVELOP DEPLOY OPTIMIZE CONSULT TRAIN </strong>
       </h3>
 
       <div className="Tech--skillsSection">

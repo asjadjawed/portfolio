@@ -1,19 +1,13 @@
 @import "../../config";
 
-$TechIcon-size: 4.5rem;
-
 .TechIcon {
   box-sizing: border-box;
-  width: $TechIcon-size;
-  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 
   &--icon {
     display: block;
-    width: $TechIcon-size;
-    height: $TechIcon-size;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,10 +17,46 @@ $TechIcon-size: 4.5rem;
       transform: scale(1.1);
     }
   }
+
   &--subtitle {
-    display: block;
-    margin-top: 0.5rem;
     text-align: center;
     color: setTextColor($primary-color);
+  }
+}
+
+@include mediaSmall {
+  $TechIcon-size: 3rem;
+
+  .TechIcon {
+    width: $TechIcon-size;
+    margin: 1rem;
+
+    &--icon {
+      width: $TechIcon-size;
+      height: $TechIcon-size;
+    }
+
+    &--subtitle {
+      display: none;
+    }
+  }
+}
+
+@include mediaMedium {
+  $TechIcon-size: 4rem;
+
+  .TechIcon {
+    width: $TechIcon-size;
+    margin: 1.2rem;
+
+    &--icon {
+      width: $TechIcon-size;
+      height: $TechIcon-size;
+    }
+
+    &--subtitle {
+      display: block;
+      margin-top: 0rem;
+    }
   }
 }

@@ -5,7 +5,7 @@
   background: lighten($primary-color, 5);
   color: setTextColor($primary-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
-  margin: 0.3rem;
+  margin: 0.1rem;
   padding: 0.2rem 0.5rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -33,9 +33,10 @@
   &--tag {
     @include tags;
     @include transitionEase;
+    transform: scale(0.9);
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1);
     }
   }
 
@@ -44,6 +45,8 @@
     @include transitionEase;
     background: $secondary-color;
     color: setTextColor($secondary-color);
+    transform: scale(1.1);
+    margin: 0.35rem;
 
     &:hover {
       transform: scale(1.1);
