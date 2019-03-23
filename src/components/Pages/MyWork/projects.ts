@@ -26,7 +26,7 @@ export const projects = [
       "React",
       "React-Router",
       "Normalize.css",
-      "Font Awesome",
+      "Particles.js",
       "portfolio",
       "website"
     ]
@@ -44,11 +44,9 @@ export const projects = [
       "CSS3",
       "JavaScript",
       "React",
-      "React Tilt",
       "Particles.js",
       "Node.js",
       "Express",
-      "JSON",
       "bcrypt",
       "PostgreSQL",
       "knex.js",
@@ -70,7 +68,6 @@ export const projects = [
       "Node.js",
       "CSS3",
       "Express",
-      "JSON",
       "request",
       "Handlebars",
       "MapQuest API",
