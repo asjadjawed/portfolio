@@ -14,19 +14,25 @@ export default function Home() {
       <div>
         <a
           className="Home--iconLink"
-          href="https://twitter.com"
+          href="https://twitter.com/asjadjawed"
           target="_blank"
         >
           <i className="Home--icon fab fa-twitter" />
         </a>
+
         <a
           className="Home--iconLink"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/asjadjawed"
           target="_blank"
         >
           <i className="Home--icon fab fa-linkedin-in" />
         </a>
-        <a className="Home--iconLink" href="https://github.com" target="_blank">
+
+        <a
+          className="Home--iconLink"
+          href="https://github.com/asjadjawed"
+          target="_blank"
+        >
           <i className="Home--icon fab fa-github" />
         </a>
       </div>

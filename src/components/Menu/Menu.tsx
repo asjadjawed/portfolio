@@ -32,6 +32,31 @@ export default class Menu extends Component {
             }
           >
             <div className="Menu--portrait" />
+            <div>
+              <a
+                className="Menu--iconLink"
+                href="https://twitter.com/asjadjawed"
+                target="_blank"
+              >
+                <i className="Menu--icon fab fa-twitter" />
+              </a>
+
+              <a
+                className="Menu--iconLink"
+                href="https://www.linkedin.com/in/asjadjawed"
+                target="_blank"
+              >
+                <i className="Menu--icon fab fa-linkedin-in" />
+              </a>
+
+              <a
+                className="Menu--iconLink"
+                href="https://github.com/asjadjawed"
+                target="_blank"
+              >
+                <i className="Menu--icon fab fa-github" />
+              </a>
+            </div>
           </div>
           <div className={active ? "Menu--nav Menu--nav-active" : "Menu--nav"}>
             <ul className="Menu--ul">

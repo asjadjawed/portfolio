@@ -29,6 +29,8 @@
   &--branding {
     width: 50vw;
     display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: $primary-color;
@@ -41,6 +43,16 @@
     border-radius: 50%;
     background: url("../../images/portrait.png");
     border: solid 0.3rem $secondary-color;
+  }
+
+  &--icon {
+    padding: 0.5rem;
+    color: setTextColor($primary-color);
+    @include transitionEase;
+
+    &:hover {
+      @include secondaryColor;
+    }
   }
 
   &--nav {
@@ -114,6 +126,10 @@
       }
     }
 
+    &--icon {
+      font-size: 2rem;
+    }
+
     &--nav {
       transform: translate(100%);
     }
@@ -137,8 +153,8 @@
     }
 
     &--portrait {
-      width: 20vmax;
-      height: 20vmax;
+      width: 15vmax;
+      height: 15vmax;
     }
 
     &--nav {
