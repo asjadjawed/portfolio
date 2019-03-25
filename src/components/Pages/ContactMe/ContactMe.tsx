@@ -30,22 +30,6 @@ export default function ContactMe() {
             @asjadjawed
           </h3>
         </div>
-
-        {/* <div className="ContactMe--contact">
-          <h3>
-            <span className="ContactMe--text-secondaryColor">
-              Cell / Whatsapp:{" "}
-            </span>
-            +92 (300) 8214696, +92 (333) 2168446
-          </h3>
-        </div>
-
-        <div className="ContactMe--contact">
-          <h3>
-            <span className="ContactMe--text-secondaryColor">Address: </span>
-            Suite#206, PECHS Community Center, PECHS - 2, KHI - PK
-          </h3>
-        </div> */}
       </div>
     </div>
   );
