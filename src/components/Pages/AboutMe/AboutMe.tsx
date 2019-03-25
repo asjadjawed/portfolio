@@ -15,7 +15,7 @@ export default function AboutMe() {
         <h2 className="AboutMe--text-secondaryColor AboutMe--gridHeading">
           BIO
         </h2>
-        <img src={portrait} alt="Asjad" className="AboutMe--image" />
+        <i className="AboutMe--image AboutMe--text-secondaryColor fas fa-user-circle" />
         <div className="AboutMe--bio">
           <p>
             I am an Accountant (IMA-USA) turned{" "}

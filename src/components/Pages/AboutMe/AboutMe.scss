@@ -32,8 +32,6 @@
 
   &--image {
     grid-area: portrait;
-    border-radius: 50%;
-    border: solid 0.3rem $secondary-color;
     margin: auto;
     width: 20vmax;
     height: 20vmax;
@@ -54,6 +52,10 @@
       "gh"
       "bio";
   }
+
+  .AboutMe--image {
+    font-size: 7rem;
+  }
 }
 
 @include mediaLarge {
@@ -62,6 +64,10 @@
     grid-template-areas:
       ". gh ."
       "portrait bio bio";
+  }
+
+  .AboutMe--image {
+    font-size: 12rem;
   }
 }
 
