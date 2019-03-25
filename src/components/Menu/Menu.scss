@@ -1,6 +1,10 @@
 @import "../../config";
 
 .Menu {
+  &--text-secondaryColor {
+    @include secondaryColor;
+  }
+
   &--overlay {
     position: fixed;
     top: 0;
@@ -37,12 +41,10 @@
     @include transitionEase;
   }
 
-  &--portrait {
-    width: 20vh;
-    height: 20vh;
-    border-radius: 50%;
-    background: url("../../images/portrait.png");
-    border: solid 0.3rem $secondary-color;
+  &--logo {
+    border-top: 0.3rem solid setTextColor($primary-color);
+    border-bottom: 0.3rem solid $secondary-color;
+    padding: 0;
   }
 
   &--icon {
@@ -150,11 +152,6 @@
       &-active {
         transform: translate(0);
       }
-    }
-
-    &--portrait {
-      width: 15vmax;
-      height: 15vmax;
     }
 
     &--nav {

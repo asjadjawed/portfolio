@@ -31,7 +31,10 @@ export default class Menu extends Component {
               active ? "Menu--branding Menu--branding-active" : "Menu--branding"
             }
           >
-            <div className="Menu--portrait" />
+            <h1 className="Menu--logo">
+              Asjad <span className="Menu--text-secondaryColor">Jawed</span>
+            </h1>
+
             <div>
               <a
                 className="Menu--iconLink"
