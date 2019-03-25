@@ -18,7 +18,7 @@ $colors: (
   silver: #dddddd
 );
 
-$primary-color: #444;
+$primary-color: #fff;
 $secondary-color: map-get($colors, red);
 
 @import url("https://fonts.googleapis.com/css?family=Abel");
@@ -35,7 +35,6 @@ $primary-font: "Abel", serif;
   font-weight: bold;
   margin: 1rem 0;
   line-height: 1.5;
-  // padding: 1rem 0;
   margin: 1.5rem 0;
 }
 
