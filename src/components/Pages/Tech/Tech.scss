@@ -45,7 +45,7 @@
 
   &--skillsBorder {
     border: none;
-    background: lighten($primary-color, 40);
+    background: setTextColor($primary-color);
     border-bottom: 0.3rem solid $secondary-color;
     border-top: 0.3rem solid $secondary-color;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);

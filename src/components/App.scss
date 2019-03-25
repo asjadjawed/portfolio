@@ -1,19 +1,10 @@
 @import "../config";
 
 body {
-  border: 1px solid transparent;
-}
-
-body {
-  background: linear-gradient(
-    calc(15deg * 9),
-    $primary-color,
-    darken($primary-color, 15)
-  );
-  min-height: 100vh;
   font-family: $primary-font;
   color: setTextColor($primary-color);
   line-height: 1.8;
+  background: $primary-color;
 }
 
 footer {
