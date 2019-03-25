@@ -159,5 +159,12 @@ export const projects = [
 ];
 
 export const tagsList = makeFlatUniqueCountSortedArray(
-  projects.flatMap(({ tags }) => tags).sort()
+  // Using reduce because flatmap is not well supported
+  projects
+    .reduce(
+      (flattenedArray: string[], { tags }): string[] =>
+        flattenedArray.concat(...tags),
+      []
+    )
+    .sort()
 );

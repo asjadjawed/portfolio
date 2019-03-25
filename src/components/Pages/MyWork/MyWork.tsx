@@ -71,8 +71,15 @@ export default class MyWork extends Component {
                         this.setState({
                           tagsList: removeFromArray(
                             makeFlatUniqueCountSortedArray(
+                              // Using reduce because flatmap is not well supported
                               this.state.projects
-                                .flatMap(({ tags }) => tags)
+                                .reduce(
+                                  (
+                                    flattenedArray: string[],
+                                    { tags }
+                                  ): string[] => flattenedArray.concat(...tags),
+                                  []
+                                )
                                 .sort()
                             ),
                             this.state.selectedTags
@@ -114,8 +121,15 @@ export default class MyWork extends Component {
                         this.setState({
                           tagsList: removeFromArray(
                             makeFlatUniqueCountSortedArray(
+                              // Using reduce because flatmap is not well supported
                               this.state.projects
-                                .flatMap(({ tags }) => tags)
+                                .reduce(
+                                  (
+                                    flattenedArray: string[],
+                                    { tags }
+                                  ): string[] => flattenedArray.concat(...tags),
+                                  []
+                                )
                                 .sort()
                             ),
                             this.state.selectedTags
