@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactGA from "react-ga";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // Should use BrowserRouter, but HashRouter needed for GitHub Pages
 
@@ -14,8 +15,12 @@ import Tech from "./Pages/Tech/Tech";
 
 import license from "../images/license.svg";
 
+ReactGA.initialize("UA-136945448-1");
+
 class App extends Component {
   public render() {
+    ReactGA.pageview("/");
+
     return (
       <Router basename="/">
         <div className="App">
@@ -32,9 +37,7 @@ class App extends Component {
             </Switch>
           </main>
           <footer>
-            <small>
-              Licensed under CC BY 4.0
-            </small>
+            <small>Licensed under CC BY 4.0</small>
             <a
               rel="license"
               href="http://creativecommons.org/licenses/by/4.0/"
