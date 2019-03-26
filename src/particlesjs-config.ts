@@ -36,7 +36,7 @@ export default JSON.parse(`{
       }
     },
     "size": {
-      "value": 160,
+      "value": 50,
       "random": true,
       "anim": {
         "enable": true,
@@ -54,7 +54,7 @@ export default JSON.parse(`{
     },
     "move": {
       "enable": true,
-      "speed": 3,
+      "speed": 2,
       "direction": "none",
       "random": true,
       "straight": false,
