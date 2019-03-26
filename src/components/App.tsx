@@ -18,9 +18,11 @@ import license from "../images/license.svg";
 ReactGA.initialize("UA-136945448-1");
 
 class App extends Component {
-  public render() {
-    ReactGA.pageview("/");
+  public componentDidMount() {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
+  public render() {
     return (
       <Router basename="/">
         <div className="App">
