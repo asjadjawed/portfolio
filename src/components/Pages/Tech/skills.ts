@@ -13,6 +13,7 @@ import expressIcon from "../../../images/icons/express.svg";
 import figmaIcon from "../../../images/icons/figma.svg";
 import gitIcon from "../../../images/icons/git.svg";
 import gitHubIcon from "../../../images/icons/github.svg";
+import googleAnalyticsIcon from "../../../images/icons/google-analytics.svg";
 import handlebarsIcon from "../../../images/icons/handlebars.svg";
 import herokuIcon from "../../../images/icons/heroku.svg";
 import html5Icon from "../../../images/icons/html5.svg";
@@ -30,6 +31,7 @@ import mySQLIcon from "../../../images/icons/mysql.svg";
 import nginxIcon from "../../../images/icons/nginx.svg";
 import nodejsIcon from "../../../images/icons/node.js.svg";
 import npmIcon from "../../../images/icons/npm.svg";
+import openGraphIcon from "../../../images/icons/open-graph.svg";
 import parcelIcon from "../../../images/icons/parcel.svg";
 import phpIcon from "../../../images/icons/php.svg";
 import postgreSQLIcon from "../../../images/icons/postgresql.svg";
@@ -89,6 +91,8 @@ const skills = {
       chromeDevToolsIcon
     ],
     ["Jest", "https://jestjs.io/", jestIcon],
+    ["Google Analytics", "https://analytics.google.com", googleAnalyticsIcon],
+    ["Open Graph Protocol", "http://ogp.me/", openGraphIcon],
     ["ESLint", "https://eslint.org/", esLintIcon],
     ["TSLint", "https://palantir.github.io/tslint/", tsLintIcon],
     ["DigitalOcean", "https://www.digitalocean.com/", digitalOceanIcon],

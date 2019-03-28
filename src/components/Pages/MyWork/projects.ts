@@ -13,7 +13,8 @@ import weatherThumb from "../../../images/projects/weather.jpg";
 
 export const projects = [
   {
-    description: "Portfolio website built with React + TypeScript + Sass.",
+    description:
+      "Portfolio website built with React + TypeScript + Sass. Includes filter by tag for tech used.",
     heading: "My Website",
     image: portfolioThumb,
     liveLink: "https://asjad.dev/",

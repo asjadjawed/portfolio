@@ -3,6 +3,8 @@
 Live: [https://asjad.dev/](https://asjad.dev/)
 
 This is the source code for my portfolio website.
+Includes a tagging system for technologies used in making a project.
+
 Following were used in its creation:
 
 - HTML5
