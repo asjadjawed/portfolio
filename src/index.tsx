@@ -1,30 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Particles from "react-particles-js";
-import particlesConfig from "./particlesjs-config";
-
 import "normalize.css";
 
-import App from "./components/App";
+import Particles from "react-particles-js";
+import particlesConfig from "./config/particlesJSConfig";
+
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 // Disable right-click on website
 document.oncontextmenu = e => e.preventDefault();
 
+const particlesStyle = {
+  position: "fixed",
+  height: "100vh",
+  width: "100vh",
+  left: "0",
+  top: "0",
+  zIndex: "-1000"
+};
+
 ReactDOM.render(
   <div>
-    <Particles
-      params={particlesConfig}
-      style={{
-        height: "90vh",
-        left: "0",
-        position: "fixed",
-        top: "0",
-        width: "100vh",
-        zIndex: "-1000"
-      }}
-    />
+    <Particles params={particlesConfig} style={particlesStyle} />
     <App />
   </div>,
   document.getElementById("root")

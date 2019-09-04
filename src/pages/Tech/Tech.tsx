@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Tech.scss";
 
-import TechIcon from "../../TechIcon/TechIcon";
+import TechIcon from "../../components/TechIcon/TechIcon";
 import skills from "./skills";
 
 export default function Tech() {

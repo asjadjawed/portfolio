@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Project from "../../Project/Project";
+import Project from "../../components/Project/Project";
 import { projects, tagsList } from "./projects";
 import {
   AddToArray,
