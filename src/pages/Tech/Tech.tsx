@@ -11,10 +11,90 @@ export default function Tech() {
       <h1 className="Tech__heading">
         Services &amp;<span className="Tech__text--secondaryColor"> Tech</span>
       </h1>
-      <h2 className="Tech__subHeading">I can help you..</h2>
+      <h2 className="Tech__servicesHeading Tech__text--secondaryColor">
+        <strong>I can help you with...</strong>
+      </h2>
 
-      <h2 className="Tech__services Tech__text--secondaryColor">
-        <strong>DESIGN DEVELOP DEPLOY CONSULT TRAIN</strong>
+      <div className="Tech__servicesGrid">
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon fas fa-ruler-combined"></i>
+          <h3 className="Tech__serviceCaption">Design</h3>
+          <p className="Tech__serviceDetail">
+            Designing complete customized solutions.
+            <br /> Data modelling + Computational Logic + UI / UX Design.
+            <br /> Tech Stack / Frameworks Selection.
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon far fa-window-restore"></i>
+          <h3 className="Tech__serviceCaption">Front-End Development</h3>
+          <p className="Tech__serviceDetail">
+            UI / UX Best Practices. <br />
+            Web development: HTML+CSS+JS/TS.
+            <br />
+            Single Page Application using React+Redux+JS/TS.
+            <br />
+            Windows GUI (WPF & Winforms).
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon fas fa-server"></i>
+          <h3 className="Tech__serviceCaption">Back-end Development</h3>
+          <p className="Tech__serviceDetail">
+            Design & Develop Complete n-tier solutions.
+            <br />
+            Database schema deign + data modelling.
+            <br />
+            MVC / REST architecture ( ASP.net / Node.js / PHP).
+            <br />
+            WordPress solutions.
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon fas fa-cloud"></i>
+          <h3 className="Tech__serviceCaption">Deployment</h3>
+          <p className="Tech__serviceDetail">
+            Deploying on the cloud:
+            <br /> (Microsoft Azure, Heroku, Digital Ocean).
+            <br />
+            Deployment on local servers.
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon fas fa-vial"></i>
+          <h3 className="Tech__serviceCaption">Testing</h3>
+          <p className="Tech__serviceDetail">
+            Using TDD (Test-driven development) for development.
+            <br /> Checking bugs / code refactoring for existing systems.
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon far fa-handshake"></i>
+          <h3 className="Tech__serviceCaption">Consultation</h3>
+          <p className="Tech__serviceDetail">
+            Bringing legacy systems up to date.
+            <br />
+            Picking the right technology.
+            <br />
+            Industry best practices for front / backend development.
+          </p>
+        </div>
+        <div className="Tech__service">
+          <i className="Tech__serviceIcon fas fa-university"></i>
+          <h3 className="Tech__serviceCaption">Training</h3>
+          <p className="Tech__serviceDetail">
+            Training in languages / frameworks (see below)
+            <br />
+            Clean Code (OOP Core Concepts, SOLID, DRY).
+            <br />
+            Coding Best Practices <br />
+            Setting up modern development environment.
+          </p>
+        </div>
+      </div>
+
+      <h2 className="Tech__servicesHeading Tech__text--secondaryColor">
+        <strong>Experienced with the following tech:</strong>
       </h2>
 
       <div className="Tech__skillsSection">

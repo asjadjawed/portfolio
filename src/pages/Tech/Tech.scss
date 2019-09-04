@@ -19,18 +19,42 @@
     line-height: 1;
   }
 
-  &__subHeading {
-    @include subheading;
-  }
-
   &__text--secondaryColor {
     @include secondaryColor;
   }
 
-  &__services {
+  &__servicesHeading {
     text-align: center;
     letter-spacing: 0.3rem;
     margin: 3rem;
+  }
+
+  &__servicesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &__service {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 1rem;
+  }
+
+  &__serviceIcon {
+    color: $secondary-color;
+    font-size: 3rem;
+  }
+
+  &__serviceCaption {
+    padding: 3px 0;
+    margin: 0;
+  }
+
+  &__serviceDetail {
+    text-align: center;
   }
 
   &__skillsGrid {
