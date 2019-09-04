@@ -1,4 +1,4 @@
-import { makeFlatUniqueCountSortedArray } from "./tagFunctions";
+import { makeUniqueCountSortedArray } from "./tagFunctions";
 
 import faceRecognitionThumb from "./project-thumbs/face-recognition.jpg";
 import galleryThumb from "./project-thumbs/gallery.jpg";
@@ -11,7 +11,17 @@ import shoppingThumb from "./project-thumbs/shopping.jpg";
 import todoThumb from "./project-thumbs/todo.jpg";
 import weatherThumb from "./project-thumbs/weather.jpg";
 
-export const projects = [
+export interface IProject {
+  description: string;
+  heading: string;
+  image: string;
+  liveLink: string;
+  projectID: string;
+  sourceLink: string;
+  tags: string[];
+}
+
+export const projects: IProject[] = [
   {
     description:
       "Portfolio website built with React + TypeScript + Sass. Includes filter by tag for tech used.",
@@ -159,8 +169,10 @@ export const projects = [
   }
 ];
 
-export const tagsList = makeFlatUniqueCountSortedArray(
-  // Using reduce because flatmap is not well supported
+/**
+ * List of all tags sorted by count
+ */
+export const tagsList = makeUniqueCountSortedArray(
   projects
     .reduce(
       (flattenedArray: string[], { tags }): string[] =>
