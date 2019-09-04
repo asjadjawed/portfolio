@@ -26,10 +26,10 @@ class App extends Component {
     return (
       <Router basename="/">
         <div className="App">
-          <header>
+          <header className="App__header">
             <Menu />
           </header>
-          <main>
+          <main className="App__main">
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={AboutMe} />
@@ -38,23 +38,18 @@ class App extends Component {
               <Route path="/work" component={MyWork} />
             </Switch>
           </main>
-          <footer>
-            <small>Licensed under CC BY 4.0</small>
+          <footer className="App__footer">
+            <p className="App__licenseText">
+              <small>Licensed under CC BY 4.0</small>
+            </p>
+
             <a
               href="http://creativecommons.org/licenses/by/4.0/"
               target="_blank"
               rel="license noopener noreferrer"
+              className="App__license"
             >
-              <img
-                alt="Creative Commons License"
-                style={{
-                  borderWidth: "0",
-                  display: "block",
-                  margin: "10px",
-                  width: "75%"
-                }}
-                src={license}
-              />
+              <img alt="Creative Commons License" src={license} />
             </a>
           </footer>
         </div>

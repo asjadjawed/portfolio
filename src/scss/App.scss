@@ -1,66 +1,41 @@
 @import "base";
 
-body {
-  font-family: $primary-font;
-  color: setTextColor($primary-color);
-  line-height: 1.8;
-  background: $primary-color;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  background: darken($primary-color, 2);
-  box-shadow: -4px -4px 8px 0 rgba(0, 0, 0, 0.12),
-    0 -2px 4px 0 rgba(0, 0, 0, 0.08);
-  width: 100%;
-  height: 3rem;
-  opacity: 0.9;
-  color: darken((setTextColor($primary-color)), 5);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-body::-webkit-scrollbar {
-  width: 5px;
-}
-body::-webkit-scrollbar-track {
-  background: $primary-color;
-  border-radius: 20px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: $secondary-color;
-}
-
-.App--license {
-  display: block;
-  padding-right: 1rem;
-}
-
-@include background;
-
-/* 
-Media Queries written to be mobile first
-Anything in small query carries to the largest unless over-ridden
-*/
-
-@include mediaSmall {
-  main {
+.App {
+  &__main {
     text-align: center;
     padding: 0 1rem;
+
+    @include mediaLarge {
+      text-align: left;
+      padding: 0 2rem;
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    background: darken($primary-color, 2);
+    color: darken((setTextColor($primary-color)), 5);
+    opacity: 0.9;
+    box-shadow: -4px -4px 8px 0 rgba(0, 0, 0, 0.12),
+      0 -2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__licenseText {
+    margin: 5px;
+  }
+
+  &__license {
+    display: flex;
+    margin: 5px;
   }
 }
 
-@include mediaMedium {
-}
-
-@include mediaLarge {
-  main {
-    text-align: left;
-    padding: 0 2rem;
-  }
-}
-
-@include mediaXLarge {
-}
+// mixin for optional background
+@include background;

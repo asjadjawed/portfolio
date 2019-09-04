@@ -1,3 +1,7 @@
+/**
+* Color Pallete
+*/
+
 $colors: (
   aqua: #7fdbff,
   blue: #0074d9,
@@ -21,21 +25,21 @@ $colors: (
 $primary-color: #fff;
 $secondary-color: map-get($colors, red);
 
+/**
+* Fonts & Typography
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Abel");
 $primary-font: "Abel", serif;
 
 @mixin heading {
   font-size: 4.5rem;
   font-weight: 400;
-  margin: 3rem 0 0;
-  line-height: 1;
 }
 
 @mixin subheading {
   font-weight: bold;
-  margin: 1rem 0;
   line-height: 1.5;
-  margin: 1.5rem 0;
 }
 
 @mixin emphasisText {
@@ -53,6 +57,10 @@ $primary-font: "Abel", serif;
     @return #eee;
   }
 }
+
+/**
+* Image Background
+*/
 
 $showBackground: false;
 $background-opacity: 0.8;
@@ -77,12 +85,20 @@ $background-opacity: 0.8;
   }
 }
 
+/**
+* Animations
+*/
+
 $transition-delay: 0.4s;
 $transition-function: ease;
 
 @mixin transitionEase {
   transition: all $transition-delay $transition-function;
 }
+
+/**
+* Media Queries
+*/
 
 /* 
 Media Queries written to be mobile first
@@ -116,5 +132,28 @@ Anything in small query carries to the largest unless over-ridden
 @mixin mediaXLarge {
   @media screen and (min-width: 1171px) {
     @content;
+  }
+}
+
+/**
+* Base Settings
+*/
+
+body {
+  background: $primary-color;
+  color: setTextColor($primary-color);
+
+  font-family: $primary-font;
+  line-height: 1.8;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $primary-color;
+    border-radius: 20px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary-color;
   }
 }
