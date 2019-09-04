@@ -5,38 +5,38 @@ import "./Home.scss";
 export default function Home() {
   return (
     <div className="Home">
-      <h1 className="Home--heading">
-        Asjad <span className="Home--text-secondaryColor">Jawed</span>
+      <h1 className="Home__heading">
+        Asjad <span className="Home__text--secondaryColor">Jawed</span>
       </h1>
-      <h2 className="Home--subHeading">
+      <h2 className="Home__subHeading">
         Full-Stack Developer, Consultant, &amp; Tech Coach
       </h2>
       <div>
         <a
-          className="Home--iconLink"
+          className="Home__iconLink"
           href="https://twitter.com/asjadjawed"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="Home--icon fab fa-twitter" />
+          <i className="Home__icon fab fa-twitter" />
         </a>
 
         <a
-          className="Home--iconLink"
+          className="Home__iconLink"
           href="https://www.linkedin.com/in/asjadjawed"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="Home--icon fab fa-linkedin-in" />
+          <i className="Home__icon fab fa-linkedin-in" />
         </a>
 
         <a
-          className="Home--iconLink"
+          className="Home__iconLink"
           href="https://github.com/asjadjawed"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="Home--icon fab fa-github" />
+          <i className="Home__icon fab fa-github" />
         </a>
       </div>
     </div>
