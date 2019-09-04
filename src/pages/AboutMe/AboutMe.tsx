@@ -2,6 +2,8 @@ import React from "react";
 
 import "./AboutMe.scss";
 
+import myPic from "./images/my-pic.png";
+
 export default function AboutMe() {
   return (
     <div className="AboutMe">
@@ -10,27 +12,35 @@ export default function AboutMe() {
       </h1>
       <h2 className="AboutMe__subHeading">Greetings! Here is some info...</h2>
       <div className="AboutMe__main">
-        <h2 className="AboutMe__text-secondaryColor AboutMe__gridHeading">
+        {/* <h2 className="AboutMe__text--secondaryColor AboutMe__gridHeading">
           BIO
-        </h2>
-        <i className="AboutMe__image AboutMe__text--secondaryColor fas fa-user-circle" />
+        </h2> */}
+        <div className="AboutMe__image">
+          <img src={myPic} alt="my picture" />
+        </div>
         <div className="AboutMe__bio">
           <p>
-            I am an Accountant (IMA-USA) turned{" "}
-            <strong>Full-Stack Developer</strong> . My first programming
-            experience, as a kid, was with GW-BASIC on an Intel 286 back in the{" "}
-            <strong>90s</strong>. ( Computers have come a long way since...).
+            I am a qualified accountant (IMA-USA) turned{" "}
+            <strong>Full-Stack Developer</strong>. My earliest programming
+            experience, was with GW-BASIC on an Intel 286 back in the{" "}
+            <strong>90s</strong> ( computers have come a long way since...).
           </p>
           <p>
-            I have provided companies with in-house tech solutions for
-            accounting, finance, inventory management etc. ( in addition to
-            accounting services).
+            During my career, I have provided various companies with tech
+            solutions for their accounting, finance, inventory management needs
+            (in addition to accounting / business management services).
           </p>
           <p>
-            My skill set allows me to work with the widely popular{" "}
+            My skill set allows me to work with the ubiquitous{" "}
             <strong>LAMP</strong> (Linux / Apache / MySQL / PHP) stack, the
             cutting-edge <strong>MERN</strong> (MongoDB / Express / React /
-            Node.js) stack as well as others.
+            Node.js), as well as <strong>Microsoft's .net</strong> solution for
+            enterprises (C# / ASP.net / SQL Server / Azure) allowing me to
+            deliver solutions as per the client's requirements.
+          </p>
+          <p>
+            I work closely with my clients to deliver solutions (Native / Cloud)
+            that are customized to their needs.
           </p>
         </div>
       </div>

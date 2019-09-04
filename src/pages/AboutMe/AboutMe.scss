@@ -49,11 +49,20 @@
 
   &__image {
     grid-area: portrait;
+    height: 15rem;
     margin: 0 auto;
     font-size: 7rem;
+    border: 0.5rem solid $secondary-color;
+    border-radius: 50%;
+    overflow: hidden;
 
     @include mediaLarge {
-      font-size: 12rem;
+      height: 12rem;
+    }
+
+    img {
+      filter: grayscale(1);
+      height: 100%;
     }
   }
 
