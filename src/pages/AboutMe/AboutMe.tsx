@@ -16,7 +16,7 @@ export default function AboutMe() {
           BIO
         </h2> */}
         <div className="AboutMe__image">
-          <img src={myPic} alt="my picture" />
+          <img src={myPic} alt="me" />
         </div>
         <div className="AboutMe__bio">
           <p>
