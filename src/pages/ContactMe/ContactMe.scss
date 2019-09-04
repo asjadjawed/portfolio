@@ -2,32 +2,39 @@
 
 .ContactMe {
   width: 100%;
+  margin-bottom: 5rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
 
-  &--heading {
-    @include heading;
+  @include mediaLarge {
+    height: 75vh;
   }
 
-  &--subHeading {
+  &__heading {
+    @include heading;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__subHeading {
     @include subheading;
   }
 
-  &--text-secondaryColor {
+  &__text--secondaryColor {
     @include secondaryColor;
   }
 
-  &--main {
+  &__main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  &--contact {
+  &__contact {
     border: 0.3rem solid setTextColor($primary-color);
     margin: 1rem;
     padding: 0.75rem 1.5rem;
@@ -37,15 +44,9 @@
       padding: 0.5rem 1.2rem;
       background: $secondary-color;
 
-      .ContactMe--text-secondaryColor {
+      .ContactMe__text--secondaryColor {
         color: setTextColor($secondary-color);
       }
     }
-  }
-}
-
-@include mediaLarge {
-  .ContactMe {
-    height: 75vh;
   }
 }
