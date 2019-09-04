@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Home.scss";
 
@@ -39,6 +40,9 @@ export default function Home() {
           <i className="Home__icon fab fa-github" />
         </a>
       </div>
+      <NavLink to="/skills" className="Home__cta">
+        Let's Get Started &#8594;
+      </NavLink>
     </div>
   );
 }
