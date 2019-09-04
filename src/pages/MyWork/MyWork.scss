@@ -12,73 +12,65 @@
 }
 
 .MyWork {
-  padding-bottom: 5rem;
+  margin-bottom: 5rem;
 
-  &--heading {
+  &__heading {
     @include heading;
+    padding: 0;
+    margin: 2rem 0;
   }
 
-  &--subHeading {
+  &__subHeading {
     @include subheading;
   }
 
-  &--text-secondaryColor {
+  &__text--secondaryColor {
     @include secondaryColor;
   }
 
-  &--suggestions {
+  &__suggestions {
     text-align: center;
   }
 
-  &--tag {
+  &__tag {
     @include tags;
-    @include transitionEase;
     transform: scale(0.9);
+    @include transitionEase;
 
     &:hover {
       transform: scale(1);
     }
   }
 
-  &--selectedTag {
+  &__selectedTag {
     @include tags;
-    @include transitionEase;
     background: $secondary-color;
     color: setTextColor($secondary-color);
-    transform: scale(1.1);
     font-weight: bold;
     margin: 0.35rem;
+    transform: scale(1.1);
+    @include transitionEase;
 
     &:hover {
       transform: scale(1.1);
     }
   }
 
-  &--main {
+  &__main {
     max-width: 1100px;
     margin: 5rem auto;
     display: grid;
-    grid-gap: 2.5rem;
-    align-items: center;
-    justify-items: center;
-  }
-}
-
-@include mediaSmall {
-  .MyWork--main {
     grid-template-columns: 1fr;
     align-items: stretch;
-  }
-}
+    grid-gap: 2.5rem;
+    justify-items: center;
 
-@include mediaLarge {
-  .MyWork--main {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    @include mediaLarge {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-@include mediaXLarge {
-  .MyWork--main {
-    grid-template-columns: repeat(3, 1fr);
+    @include mediaXLarge {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

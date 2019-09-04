@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 import Project from "../../components/Project/Project";
-import { projects, tagsList } from "./projects";
+import { IProject, projects, tagsList } from "./projects";
 import {
   AddToArray,
-  makeFlatUniqueCountSortedArray,
+  makeUniqueCountSortedArray,
   removeFromArray
 } from "./tagFunctions";
 
@@ -16,16 +16,11 @@ interface IState {
   tagsList: string[];
 }
 
-export interface IProject {
-  description: string;
-  heading: string;
-  image: string;
-  liveLink: string;
-  projectID: string;
-  sourceLink: string;
-  tags: string[];
-}
-
+/**
+ * Remove projects for given tags
+ * @param projectList the projects list
+ * @param inputTags the tags for which the projects will be removed
+ */
 export const filterProjects = (projectList: IProject[], inputTags: string[]) =>
   projectList.filter(({ tags }) =>
     inputTags.every(inputTag => tags.includes(inputTag))
@@ -42,15 +37,15 @@ export default class MyWork extends Component {
 
     return (
       <div className="MyWork">
-        <h1 className="MyWork--heading">
-          My <span className="MyWork--text-secondaryColor">Work</span>
+        <h1 className="MyWork__heading">
+          My <span className="MyWork__text--secondaryColor">Work</span>
         </h1>
-        <h2 className="MyWork--subHeading">Check out some of my projects...</h2>
+        <h2 className="MyWork__subHeading">Check out some of my projects...</h2>
 
-        <div className="MyWork--selected">
+        <div className="MyWork__selected">
           {this.state.selectedTags.map(tag => (
             <small
-              className="MyWork--selectedTag"
+              className="MyWork__selectedTag"
               key={tag}
               onClick={e => {
                 this.setState(
@@ -70,7 +65,7 @@ export default class MyWork extends Component {
                       () => {
                         this.setState({
                           tagsList: removeFromArray(
-                            makeFlatUniqueCountSortedArray(
+                            makeUniqueCountSortedArray(
                               // Using reduce because flatmap is not well supported
                               this.state.projects
                                 .reduce(
@@ -96,10 +91,10 @@ export default class MyWork extends Component {
           ))}
         </div>
 
-        <div className="MyWork--suggestions">
+        <div className="MyWork__suggestions">
           {this.state.tagsList.map(tag => (
             <small
-              className="MyWork--tag"
+              className="MyWork__tag"
               key={tag}
               onClick={e => {
                 this.setState(
@@ -120,7 +115,7 @@ export default class MyWork extends Component {
                       () => {
                         this.setState({
                           tagsList: removeFromArray(
-                            makeFlatUniqueCountSortedArray(
+                            makeUniqueCountSortedArray(
                               // Using reduce because flatmap is not well supported
                               this.state.projects
                                 .reduce(
@@ -146,7 +141,7 @@ export default class MyWork extends Component {
           ))}
         </div>
 
-        <div className="MyWork--main">
+        <div className="MyWork__main">
           {projectsList.map(
             ({
               description,
