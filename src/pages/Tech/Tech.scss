@@ -6,14 +6,17 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding: 0 1rem;
 }
 
 .Tech {
+  margin-top: 5rem;
   padding-bottom: 5rem;
 
   &__heading {
     @include heading;
+    padding: 0;
+    margin-top: 2rem;
+    line-height: 1;
   }
 
   &__subHeading {

@@ -11,11 +11,11 @@ $menuButton-size: 1.8rem;
   transition: all $transition-delay linear;
   cursor: pointer;
 
-  &-active {
+  &--active {
     transform: rotate(calc(45deg * 3));
   }
 
-  &--btnLine {
+  &__btnLine {
     height: 12%;
     background: setTextColor($primary-color);
     transition: all 0.5s linear;
@@ -32,15 +32,17 @@ $menuButton-size: 1.8rem;
       animation: slideIn 0.5s 0.2s;
     }
 
-    &-active:nth-child(1) {
+    &--active:nth-child(1) {
       transform: translate(0, 275%);
+      background: $secondary-color;
     }
-    &-active:nth-child(2) {
+    &--active:nth-child(2) {
       filter: opacity(0%);
     }
 
-    &-active:nth-child(3) {
+    &--active:nth-child(3) {
       transform: translate(0, -275%) rotate(90deg);
+      background: $secondary-color;
     }
   }
 }
