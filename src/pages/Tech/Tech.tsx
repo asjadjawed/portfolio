@@ -58,6 +58,7 @@ export default function Tech() {
             <br /> (Microsoft Azure, Heroku, Digital Ocean).
             <br />
             Deployment on local servers.
+            <br /> Version control + deployment via Git.
           </p>
         </div>
         <div className="Tech__service">
@@ -87,7 +88,7 @@ export default function Tech() {
             <br />
             Clean Code (OOP Core Concepts, SOLID, DRY).
             <br />
-            Coding Best Practices <br />
+            Coding Best Practices. <br />
             Setting up modern development environment.
           </p>
         </div>
