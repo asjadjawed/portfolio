@@ -2,6 +2,7 @@
 
 .Project {
   box-sizing: border-box;
+  width: 280px;
   padding: 1rem;
   background: lighten($primary-color, 5);
   border-bottom: 0.3rem solid $secondary-color;
@@ -12,28 +13,36 @@
   justify-content: flex-end;
   @include transitionEase;
 
+  @include mediaMedium {
+    width: 325px;
+  }
+
+  @include mediaXLarge {
+    width: 325px;
+  }
+
   &:hover {
     transform: scale(1.07);
   }
 
-  &--heading {
+  &__heading {
     text-align: center;
     margin: 2rem auto;
   }
 
-  &--image {
+  &__image {
     display: block;
     width: 95%;
     margin: 0 auto;
   }
 
-  &--description {
+  &__description {
     text-align: center;
     margin: 1.5rem 0;
     flex-basis: 5rem;
   }
 
-  &--buttons {
+  &__buttons {
     display: flex;
     justify-content: space-around;
 
@@ -51,23 +60,5 @@
         @include secondaryColor;
       }
     }
-  }
-}
-
-@include mediaSmall {
-  .Project {
-    width: 280px;
-  }
-}
-
-@include mediaMedium {
-  .Project {
-    width: 325px;
-  }
-}
-
-@include mediaXLarge {
-  .Project {
-    width: 325px;
   }
 }
