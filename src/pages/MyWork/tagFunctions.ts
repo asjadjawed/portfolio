@@ -1,10 +1,28 @@
-export const removeFromArray = (parentArray: string[], subArray: string[]) =>
-  parentArray.filter(elem => subArray.indexOf(elem) === -1);
+/**
+ * Removes all elements of sub-array from parent array
+ * @param parentArray the array to filer
+ * @param subArray the elements in an array to remove from parentArray
+ */
+export const removeFromArray = (
+  parentArray: string[],
+  subArray: string[]
+): string[] => parentArray.filter(elem => subArray.indexOf(elem) === -1);
 
-export const AddToArray = (array: string[], value: string) => [...array, value];
+/**
+ * Add an element to array
+ * @param array the array
+ * @param element element to add
+ */
+export const AddToArray = (array: string[], element: string): string[] => [
+  ...array,
+  element
+];
 
-// Generate Array of Unique Tags Sorted by Count
-export const makeFlatUniqueCountSortedArray = (inputArray: string[]) => {
+/**
+ * Remove duplicate tags and sorts by count based on no. of tags in input array
+ * @param inputArray input array of strings
+ */
+export const makeUniqueCountSortedArray = (inputArray: string[]): string[] => {
   interface IElemCount {
     [key: string]: number;
   }
