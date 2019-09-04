@@ -105,12 +105,6 @@ Media Queries written to be mobile first
 Anything in small query carries to the largest unless over-ridden
 */
 
-@mixin mediaSmall {
-  @media screen and (min-width: 0px) {
-    @content;
-  }
-}
-
 @mixin mediaMedium {
   @media screen and (min-width: 500px) {
     @content;
