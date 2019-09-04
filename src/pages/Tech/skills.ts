@@ -1,13 +1,16 @@
 import adobeXDIcon from "./tech-icons/adobexd.svg";
 import apacheIcon from "./tech-icons/apache.svg";
+import aspDotNetIcon from "./tech-icons/aspdotnet.svg";
 import babelIcon from "./tech-icons/babel.svg";
 import bcryptIcon from "./tech-icons/bcrypt.svg";
 import bemIcon from "./tech-icons/bem.svg";
 import bootstrapIcon from "./tech-icons/bootstrap.svg";
 import bulmaIcon from "./tech-icons/bulma.svg";
 import chromeDevToolsIcon from "./tech-icons/chromedevtools.svg";
+import csharpIcon from "./tech-icons/csharp.svg";
 import css3Icon from "./tech-icons/css3.svg";
 import digitalOceanIcon from "./tech-icons/digitalocean.svg";
+import dotNetIcon from "./tech-icons/dotnet.svg";
 import esLintIcon from "./tech-icons/eslint.svg";
 import expressIcon from "./tech-icons/express.svg";
 import figmaIcon from "./tech-icons/figma.svg";
@@ -42,9 +45,9 @@ import reduxIcon from "./tech-icons/redux.svg";
 import regExIcon from "./tech-icons/regex.svg";
 import restApiIcon from "./tech-icons/restapi.svg";
 import sassIcon from "./tech-icons/sass.svg";
-import tsLintIcon from "./tech-icons/tslint.svg";
 import typescriptIcon from "./tech-icons/typescript.svg";
 import virtualBoxIcon from "./tech-icons/virtualbox.svg";
+import visualStudioIcon from "./tech-icons/visualstudio.svg";
 import visualStudioCodeIcon from "./tech-icons/visualstudiocode.svg";
 import webpackIcon from "./tech-icons/webpack.svg";
 import windowsIcon from "./tech-icons/windows.svg";
@@ -54,11 +57,13 @@ const skills = {
   backEnd: [
     ["Linux", "https://www.kernel.org/", linuxIcon],
     ["Windows", "https://www.microsoft.com/en-us/windows", windowsIcon],
-    ["Node.js", "https://nodejs.org/en/", nodejsIcon],
     ["TypeScript", "https://www.typescriptlang.org/", typescriptIcon],
+    ["C#", "http://csharp.net/", csharpIcon],
     ["Python", "https://www.python.org/", pythonIcon],
     ["PHP", "https://secure.php.net/", phpIcon],
-    ["Wordpress", "https://wordpress.org/", wordPressIcon],
+    ["Node.js", "https://nodejs.org/en/", nodejsIcon],
+    [".net", "https://dotnet.microsoft.com/", dotNetIcon],
+    ["asp.net", "https://dotnet.microsoft.com/apps/aspnet", aspDotNetIcon],
     ["Express", "https://expressjs.com/", expressIcon],
     ["Apache", "https://httpd.apache.org/", apacheIcon],
     ["nginx", "https://nginx.org/", nginxIcon],
@@ -74,6 +79,7 @@ const skills = {
     ["Knex.js", "https://knexjs.org/", knexJSIcon],
     ["Mongoose", "https://mongoosejs.com/", mongooseIcon],
     ["Handlebars", "https://handlebarsjs.com/", handlebarsIcon],
+    ["Wordpress", "https://wordpress.org/", wordPressIcon],
 
     ["JWT", "https://jwt.io/", jwtIcon],
     ["bcrypt", "https://www.npmjs.com/package/bcrypt", bcryptIcon]
@@ -94,10 +100,10 @@ const skills = {
     ["Google Analytics", "https://analytics.google.com", googleAnalyticsIcon],
     ["Open Graph Protocol", "http://ogp.me/", openGraphIcon],
     ["ESLint", "https://eslint.org/", esLintIcon],
-    ["TSLint", "https://palantir.github.io/tslint/", tsLintIcon],
     ["DigitalOcean", "https://www.digitalocean.com/", digitalOceanIcon],
     ["Heroku", "https://www.heroku.com/", herokuIcon],
     ["VirtualBox", "https://www.virtualbox.org/wiki/Downloads", virtualBoxIcon],
+    ["Visual Studio", "https://visualstudio.microsoft.com/", visualStudioIcon],
     ["VS Code", "https://code.visualstudio.com/", visualStudioCodeIcon]
   ],
   frontEnd: [
@@ -108,6 +114,7 @@ const skills = {
       "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       javascriptIcon
     ],
+    ["TypeScript", "https://www.typescriptlang.org/", typescriptIcon],
     ["React", "https://reactjs.org/", reactIcon],
     ["Redux", "https://redux.js.org/", reduxIcon],
     [
