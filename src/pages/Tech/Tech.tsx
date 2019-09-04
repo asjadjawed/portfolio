@@ -8,20 +8,20 @@ import skills from "./skills";
 export default function Tech() {
   return (
     <div className="Tech">
-      <h1 className="Tech--heading">
-        Services &amp;<span className="Tech--text-secondaryColor"> Tech</span>
+      <h1 className="Tech__heading">
+        Services &amp;<span className="Tech__text--secondaryColor"> Tech</span>
       </h1>
-      <h2 className="Tech--subHeading">I can help you..</h2>
+      <h2 className="Tech__subHeading">I can help you..</h2>
 
-      <h2 className="Tech--services Tech--text-secondaryColor">
+      <h2 className="Tech__services Tech__text--secondaryColor">
         <strong>DESIGN DEVELOP DEPLOY CONSULT TRAIN</strong>
       </h2>
 
-      <div className="Tech--skillsSection">
-        <div className="Tech--skillsGrid">
-          <fieldset className="Tech--skillsBorder Tech--skillsBorder-frontEnd">
-            <legend className="Tech--skillsHeading">-Front-End-</legend>
-            <div className="Tech--skills">
+      <div className="Tech__skillsSection">
+        <div className="Tech__skillsGrid">
+          <fieldset className="Tech__skillsBorder Tech__skillsBorder--frontEnd">
+            <legend className="Tech__skillsHeading">-Front-End-</legend>
+            <div className="Tech__skills">
               {skills.frontEnd.map(skill => (
                 <TechIcon
                   key={skill[0]}
@@ -33,9 +33,9 @@ export default function Tech() {
             </div>
           </fieldset>
 
-          <fieldset className="Tech--skillsBorder Tech--skillsBorder-backEnd">
-            <legend className="Tech--skillsHeading">-Back-End-</legend>
-            <div className="Tech--skills">
+          <fieldset className="Tech__skillsBorder Tech__skillsBorder--backEnd">
+            <legend className="Tech__skillsHeading">-Back-End-</legend>
+            <div className="Tech__skills">
               {skills.backEnd.map(skill => (
                 <TechIcon
                   key={skill[0]}
@@ -47,9 +47,9 @@ export default function Tech() {
             </div>
           </fieldset>
 
-          <fieldset className="Tech--skillsBorder Tech--skillsBorder-devOps">
-            <legend className="Tech--skillsHeading">-Dev-Ops | Other-</legend>
-            <div className="Tech--skills">
+          <fieldset className="Tech__skillsBorder Tech__skillsBorder--devOps">
+            <legend className="Tech__skillsHeading">-Dev-Ops | Other-</legend>
+            <div className="Tech__skills">
               {skills.devOps.map(skill => (
                 <TechIcon
                   key={skill[0]}

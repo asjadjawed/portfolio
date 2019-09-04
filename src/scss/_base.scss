@@ -54,7 +54,7 @@ $primary-font: "Abel", serif;
   @if (lightness($color) > 50) {
     @return #111;
   } @else {
-    @return #eee;
+    @return #ccc;
   }
 }
 

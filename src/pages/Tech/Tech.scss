@@ -12,79 +12,72 @@
 .Tech {
   padding-bottom: 5rem;
 
-  &--heading {
+  &__heading {
     @include heading;
   }
 
-  &--subHeading {
+  &__subHeading {
     @include subheading;
   }
 
-  &--text-secondaryColor {
+  &__text--secondaryColor {
     @include secondaryColor;
   }
 
-  &--services {
+  &__services {
     text-align: center;
     letter-spacing: 0.3rem;
     margin: 3rem;
   }
 
-  &--skillsGrid {
+  &__skillsGrid {
     display: grid;
     grid-gap: 1.5rem;
     margin-top: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "fe"
+      "be"
+      "do";
+
+    @include mediaLarge {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "fe be"
+        "do do";
+    }
   }
 
-  &--skillsHeading {
+  &__skillsHeading {
     @include skillsHeading;
     background: lighten($primary-color, 5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   }
 
-  &--skillsBorder {
+  &__skillsBorder {
     border: none;
     background: lighten($primary-color, 5);
     border-bottom: 0.3rem solid $secondary-color;
     border-top: 0.3rem solid $secondary-color;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
 
-    &-frontEnd {
+    &--frontEnd {
       grid-area: fe;
     }
 
-    &-backEnd {
+    &--backEnd {
       grid-area: be;
     }
 
-    &-devOps {
+    &--devOps {
       grid-area: do;
     }
   }
 
-  &--skills {
+  &__skills {
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-  }
-}
-
-@include mediaSmall {
-  .Tech--skillsGrid {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "fe"
-      "be"
-      "do";
-  }
-}
-
-@include mediaLarge {
-  .Tech--skillsGrid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "fe be"
-      "do do";
   }
 }
