@@ -1,16 +1,24 @@
 @import "../../scss/base";
 
 .TechIcon {
+  $TechIcon-size: 3rem;
+  width: $TechIcon-size;
+  margin: 1rem;
+
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 
-  &--icon {
+  &__icon {
     display: block;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: $TechIcon-size;
+    height: $TechIcon-size;
+
     @include transitionEase;
 
     &:hover {
@@ -18,27 +26,10 @@
     }
   }
 
-  &--subtitle {
+  &__subtitle {
     text-align: center;
-    color: #111;
-  }
-}
-
-@include mediaSmall {
-  $TechIcon-size: 3rem;
-
-  .TechIcon {
-    width: $TechIcon-size;
-    margin: 1rem;
-
-    &--icon {
-      width: $TechIcon-size;
-      height: $TechIcon-size;
-    }
-
-    &--subtitle {
-      display: none;
-    }
+    color: setTextColor($primary-color);
+    display: none;
   }
 }
 
@@ -49,12 +40,12 @@
     width: $TechIcon-size;
     margin: 1.2rem;
 
-    &--icon {
+    &__icon {
       width: $TechIcon-size;
       height: $TechIcon-size;
     }
 
-    &--subtitle {
+    &__subtitle {
       display: block;
       margin-top: 0rem;
     }
