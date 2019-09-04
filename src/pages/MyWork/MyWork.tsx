@@ -21,15 +21,84 @@ interface IState {
  * @param projectList the projects list
  * @param inputTags the tags for which the projects will be removed
  */
-export const filterProjects = (projectList: IProject[], inputTags: string[]) =>
-  projectList.filter(({ tags }) =>
-    inputTags.every(inputTag => tags.includes(inputTag))
-  );
+
 export default class MyWork extends Component {
   public state: IState = {
     projects,
     selectedTags: [],
     tagsList
+  };
+
+  /**
+   * Returns project from main project list with the input tags
+   */
+  filterProjects = (projectList: IProject[], inputTags: string[]) =>
+    projectList.filter(({ tags }) =>
+      inputTags.every(inputTag => tags.includes(inputTag))
+    );
+
+  /**
+   * Remove projects without the selected tags in state
+   */
+  updateProjectsProperty = (inputState: IState) => {
+    Object.assign(inputState, {
+      projects: this.filterProjects(projects, inputState.selectedTags)
+    });
+
+    return inputState;
+  };
+
+  /**
+   * Rebuild suggested tags from selected projects
+   */
+  updateTagsProperty = (inputState: IState) => {
+    Object.assign(inputState, {
+      tagsList: removeFromArray(
+        makeUniqueCountSortedArray(
+          inputState.projects
+            .reduce(
+              (flattenedArray: string[], { tags }): string[] =>
+                flattenedArray.concat(...tags),
+              []
+            )
+            .sort()
+        ),
+        inputState.selectedTags
+      )
+    });
+
+    return inputState;
+  };
+
+  refreshSelectedTags = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    let currentState = { ...this.state };
+    // Removing selected tags
+    Object.assign(currentState, {
+      selectedTags: removeFromArray(currentState.selectedTags, [
+        e.currentTarget.textContent!
+      ])
+    });
+    // Filter projects as per new selected tags
+    currentState = this.updateProjectsProperty(currentState);
+    // Updating suggested tags as per selected projects
+    currentState = this.updateTagsProperty(currentState);
+    this.setState(currentState);
+  };
+
+  refreshSuggestedTags = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    let currentState = { ...this.state };
+    // Add to selected tags from clicked suggested tags
+    Object.assign(currentState, {
+      selectedTags: AddToArray(
+        currentState.selectedTags,
+        e.currentTarget.textContent!
+      )
+    });
+    // Filter projects as per new selected tags
+    currentState = this.updateProjectsProperty(currentState);
+    // Updating suggested tags as per selected projects
+    currentState = this.updateTagsProperty(currentState);
+    this.setState(currentState);
   };
 
   public render() {
@@ -47,44 +116,7 @@ export default class MyWork extends Component {
             <small
               className="MyWork__selectedTag"
               key={tag}
-              onClick={e => {
-                this.setState(
-                  {
-                    selectedTags: removeFromArray(this.state.selectedTags, [
-                      e.currentTarget.textContent!
-                    ])
-                  },
-                  () => {
-                    this.setState(
-                      {
-                        projects: filterProjects(
-                          projects,
-                          this.state.selectedTags
-                        )
-                      },
-                      () => {
-                        this.setState({
-                          tagsList: removeFromArray(
-                            makeUniqueCountSortedArray(
-                              // Using reduce because flatmap is not well supported
-                              this.state.projects
-                                .reduce(
-                                  (
-                                    flattenedArray: string[],
-                                    { tags }
-                                  ): string[] => flattenedArray.concat(...tags),
-                                  []
-                                )
-                                .sort()
-                            ),
-                            this.state.selectedTags
-                          )
-                        });
-                      }
-                    );
-                  }
-                );
-              }}
+              onClick={this.refreshSelectedTags}
             >
               {tag}
             </small>
@@ -96,45 +128,7 @@ export default class MyWork extends Component {
             <small
               className="MyWork__tag"
               key={tag}
-              onClick={e => {
-                this.setState(
-                  {
-                    selectedTags: AddToArray(
-                      this.state.selectedTags,
-                      e.currentTarget.textContent!
-                    )
-                  },
-                  () => {
-                    this.setState(
-                      {
-                        projects: filterProjects(
-                          projects,
-                          this.state.selectedTags
-                        )
-                      },
-                      () => {
-                        this.setState({
-                          tagsList: removeFromArray(
-                            makeUniqueCountSortedArray(
-                              // Using reduce because flatmap is not well supported
-                              this.state.projects
-                                .reduce(
-                                  (
-                                    flattenedArray: string[],
-                                    { tags }
-                                  ): string[] => flattenedArray.concat(...tags),
-                                  []
-                                )
-                                .sort()
-                            ),
-                            this.state.selectedTags
-                          )
-                        });
-                      }
-                    );
-                  }
-                );
-              }}
+              onClick={this.refreshSuggestedTags}
             >
               {tag}
             </small>
