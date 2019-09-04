@@ -5,21 +5,21 @@ import "./AboutMe.scss";
 export default function AboutMe() {
   return (
     <div className="AboutMe">
-      <h1 className="AboutMe--heading">
-        About <span className="AboutMe--text-secondaryColor">Me</span>
+      <h1 className="AboutMe__heading">
+        About <span className="AboutMe__text--secondaryColor">Me</span>
       </h1>
-      <h2 className="AboutMe--subHeading">Greetings! Here is some info...</h2>
-      <div className="AboutMe--main">
-        <h2 className="AboutMe--text-secondaryColor AboutMe--gridHeading">
+      <h2 className="AboutMe__subHeading">Greetings! Here is some info...</h2>
+      <div className="AboutMe__main">
+        <h2 className="AboutMe__text-secondaryColor AboutMe__gridHeading">
           BIO
         </h2>
-        <i className="AboutMe--image AboutMe--text-secondaryColor fas fa-user-circle" />
-        <div className="AboutMe--bio">
+        <i className="AboutMe__image AboutMe__text--secondaryColor fas fa-user-circle" />
+        <div className="AboutMe__bio">
           <p>
             I am an Accountant (IMA-USA) turned{" "}
             <strong>Full-Stack Developer</strong> . My first programming
             experience, as a kid, was with GW-BASIC on an Intel 286 back in the{" "}
-            <strong>90s</strong>. ( Computer have come a long way since...).
+            <strong>90s</strong>. ( Computers have come a long way since...).
           </p>
           <p>
             I have provided companies with in-house tech solutions for

@@ -1,79 +1,63 @@
 @import "../../scss/base";
 
 .AboutMe {
-  padding-bottom: 5rem;
+  margin-bottom: 5rem;
 
-  &--heading {
+  &__heading {
     @include heading;
+    padding: 0;
+    margin: 2rem 0rem 0rem 0rem;
   }
 
-  &--subHeading {
+  &__subHeading {
     @include subheading;
   }
 
-  &--text-secondaryColor {
+  &__text--secondaryColor {
     @include secondaryColor;
   }
 
-  &--main {
+  &__main {
     max-width: 1200px;
     margin: 0 auto;
+
     display: grid;
-    grid-gap: 0rem 1rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  &--gridHeading {
-    grid-area: gh;
-    justify-self: left;
-    margin: 0;
-  }
-
-  &--image {
-    grid-area: portrait;
-    margin: 0 auto;
-  }
-
-  &--bio {
-    @include emphasisText;
-    grid-area: bio;
-    text-align: left;
-  }
-}
-
-@include mediaSmall {
-  .AboutMe--main {
     grid-template-columns: 1fr;
     grid-template-areas:
       "portrait"
       "gh"
       "bio";
+    grid-gap: 0rem 1rem;
+    align-items: center;
+    justify-items: center;
+
+    @include mediaLarge {
+      grid-template-columns: repeat(3, minmax(10px, 1fr));
+      grid-template-areas:
+        ". gh ."
+        "portrait bio bio";
+    }
   }
 
-  .AboutMe--image {
+  &__gridHeading {
+    grid-area: gh;
+    justify-self: left;
+    margin: 0;
+  }
+
+  &__image {
+    grid-area: portrait;
+    margin: 0 auto;
     font-size: 7rem;
-  }
-}
 
-@include mediaLarge {
-  .AboutMe--main {
-    grid-template-columns: repeat(3, minmax(10px, 1fr));
-    grid-template-areas:
-      ". gh ."
-      "portrait bio bio";
+    @include mediaLarge {
+      font-size: 12rem;
+    }
   }
 
-  .AboutMe--image {
-    font-size: 12rem;
-  }
-}
-
-@include mediaXLarge {
-  .AboutMe--main {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      ". gh ."
-      "portrait bio bio";
+  &__bio {
+    @include emphasisText;
+    grid-area: bio;
+    text-align: left;
   }
 }
