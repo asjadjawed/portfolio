@@ -40,6 +40,7 @@ export default class Menu extends Component {
                 className="Menu--iconLink"
                 href="https://twitter.com/asjadjawed"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="Menu--icon fab fa-twitter" />
               </a>
@@ -48,6 +49,7 @@ export default class Menu extends Component {
                 className="Menu--iconLink"
                 href="https://www.linkedin.com/in/asjadjawed"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="Menu--icon fab fa-linkedin-in" />
               </a>
@@ -56,6 +58,7 @@ export default class Menu extends Component {
                 className="Menu--iconLink"
                 href="https://github.com/asjadjawed"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="Menu--icon fab fa-github" />
               </a>

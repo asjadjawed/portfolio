@@ -25,18 +25,18 @@ export default class Project extends Component<IProjectProps> {
     return (
       <div className={`Project Project--${projectID}`}>
         <h2 className="Project--heading">{heading}</h2>
-        <a href={liveLink} target="_blank">
+        <a href={liveLink} target="_blank" rel="noopener noreferrer">
           <img className="Project--image" src={image} alt={heading} />
         </a>
         <p className="Project--description">{description}</p>
         <div className="Project--buttons">
           <div className="Project--live">
-            <a href={liveLink} target="_blank">
+            <a href={liveLink} target="_blank" rel="noopener noreferrer">
               <i className="fas fa-external-link-alt" />
             </a>
           </div>
           <div className="Project--source">
-            <a href={sourceLink} target="_blank">
+            <a href={sourceLink} target="_blank" rel="noopener noreferrer">
               <i className="fas fa-code" />
             </a>
           </div>

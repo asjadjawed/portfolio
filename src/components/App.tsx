@@ -41,9 +41,9 @@ class App extends Component {
           <footer>
             <small>Licensed under CC BY 4.0</small>
             <a
-              rel="license"
               href="http://creativecommons.org/licenses/by/4.0/"
               target="_blank"
+              rel="license noopener noreferrer"
             >
               <img
                 alt="Creative Commons License"

@@ -16,6 +16,7 @@ export default function Home() {
           className="Home--iconLink"
           href="https://twitter.com/asjadjawed"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="Home--icon fab fa-twitter" />
         </a>
@@ -24,6 +25,7 @@ export default function Home() {
           className="Home--iconLink"
           href="https://www.linkedin.com/in/asjadjawed"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="Home--icon fab fa-linkedin-in" />
         </a>
@@ -32,6 +34,7 @@ export default function Home() {
           className="Home--iconLink"
           href="https://github.com/asjadjawed"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <i className="Home--icon fab fa-github" />
         </a>

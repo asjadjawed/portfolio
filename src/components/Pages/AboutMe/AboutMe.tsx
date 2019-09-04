@@ -2,8 +2,6 @@ import React from "react";
 
 import "./AboutMe.scss";
 
-import portrait from "../../../images/portrait.png";
-
 export default function AboutMe() {
   return (
     <div className="AboutMe">
