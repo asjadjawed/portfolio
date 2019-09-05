@@ -4,11 +4,14 @@ import faceRecognitionThumb from "./project-thumbs/face-recognition.jpg";
 import galleryThumb from "./project-thumbs/gallery.jpg";
 import gradientThumb from "./project-thumbs/gradient.jpg";
 import hackThumb from "./project-thumbs/hackathon-3k.jpg";
+import natoursThumb from "./project-thumbs/natours.jpg";
+import nexterThumb from "./project-thumbs/nexter.jpg";
 import notesThumb from "./project-thumbs/notes.jpg";
 import portfolioThumb from "./project-thumbs/portfolio.jpg";
 import roboThumb from "./project-thumbs/robo-inc.jpg";
 import shoppingThumb from "./project-thumbs/shopping.jpg";
 import todoThumb from "./project-thumbs/todo.jpg";
+import trilloThumb from "./project-thumbs/trillo.jpg";
 import weatherThumb from "./project-thumbs/weather.jpg";
 
 export interface IProject {
@@ -22,6 +25,33 @@ export interface IProject {
 }
 
 export const projects: IProject[] = [
+  {
+    description: "A real-estate agent website template (Sass + Grid)",
+    heading: "Nexter",
+    image: nexterThumb,
+    liveLink: "https://asjad.dev/nexter/",
+    projectID: "nexter",
+    sourceLink: "https://github.com/asjadjawed/nexter",
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"]
+  },
+  {
+    description: "A hotel app template with Sass + flexbox",
+    heading: "Trillo",
+    image: trilloThumb,
+    liveLink: "https://asjad.dev/trillo/",
+    projectID: "trillo",
+    sourceLink: "https://github.com/asjadjawed/trillo",
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"]
+  },
+  {
+    description: "A tourism website using Sass + custom-built grid system",
+    heading: "Natours",
+    image: natoursThumb,
+    liveLink: "https://asjad.dev/natours",
+    projectID: "natours",
+    sourceLink: "https://github.com/asjadjawed/natours/",
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "website"]
+  },
   {
     description:
       "Portfolio website built with React + TypeScript + Sass. Includes filter by tag for tech used.",
