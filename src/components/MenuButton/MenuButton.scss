@@ -16,7 +16,7 @@ $menuButton-size: 1.8rem;
   }
 
   &__btnLine {
-    height: 12%;
+    height: 7%;
     background: setTextColor($primary-color);
     transition: all 0.5s linear;
 
@@ -33,7 +33,7 @@ $menuButton-size: 1.8rem;
     }
 
     &--active:nth-child(1) {
-      transform: translate(0, 275%);
+      transform: translate(0, 450%);
       background: $secondary-color;
     }
     &--active:nth-child(2) {
@@ -41,7 +41,7 @@ $menuButton-size: 1.8rem;
     }
 
     &--active:nth-child(3) {
-      transform: translate(0, -275%) rotate(90deg);
+      transform: translate(0, -450%) rotate(90deg);
       background: $secondary-color;
     }
   }
