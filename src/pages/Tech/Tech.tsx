@@ -18,10 +18,10 @@ export default function Tech() {
       <div className="Tech__servicesGrid">
         <div className="Tech__service">
           <i className="Tech__serviceIcon fas fa-ruler-combined"></i>
-          <h3 className="Tech__serviceCaption">Design</h3>
+          <h3 className="Tech__serviceCaption">Solution Design</h3>
           <p className="Tech__serviceDetail">
             Designing complete customized solutions.
-            <br /> Data modelling + Computational Logic + UI / UX Design.
+            <br /> Data modelling + Computational Logic.
             <br /> Tech Stack / Frameworks Selection.
           </p>
         </div>
@@ -33,8 +33,6 @@ export default function Tech() {
             Web development: HTML+CSS+JS/TS.
             <br />
             Single Page Application using React+Redux+JS/TS.
-            <br />
-            Windows GUI (WPF & Winforms).
           </p>
         </div>
         <div className="Tech__service">
@@ -43,11 +41,9 @@ export default function Tech() {
           <p className="Tech__serviceDetail">
             Design & Develop Complete n-tier solutions.
             <br />
-            Database schema deign + data modelling.
+            Database schema deign + data modelling (SQL/NO-SQL).
             <br />
-            MVC / REST architecture ( ASP.net / Node.js / PHP).
-            <br />
-            WordPress solutions.
+            MVC / REST architecture / GraphQL ( Node.js & Django).
           </p>
         </div>
         <div className="Tech__service">
@@ -55,18 +51,18 @@ export default function Tech() {
           <h3 className="Tech__serviceCaption">Deployment</h3>
           <p className="Tech__serviceDetail">
             Deploying on the cloud:
-            <br /> (Microsoft Azure, Heroku, Digital Ocean).
+            <br /> (AWS, Netlify, Heroku, Digital Ocean).
             <br />
             Deployment on local servers.
-            <br /> Version control + deployment via Git.
+            <br /> Version control + CI/CD + Git Workflow.
           </p>
         </div>
         <div className="Tech__service">
           <i className="Tech__serviceIcon fas fa-vial"></i>
           <h3 className="Tech__serviceCaption">Testing</h3>
           <p className="Tech__serviceDetail">
-            Using TDD (Test-driven development) for development.
-            <br /> Checking bugs / code refactoring for existing systems.
+            Using TDD (Test-driven development) for development. <br /> Unit,
+            Integration and End-End Testing.
           </p>
         </div>
         <div className="Tech__service">
@@ -86,9 +82,10 @@ export default function Tech() {
           <p className="Tech__serviceDetail">
             Training in languages / frameworks (see below)
             <br />
-            Clean Code (OOP Core Concepts, SOLID, DRY).
+            Clean Code (OOP Core Concepts, SOLID, DRY, Design Patterns).
             <br />
             Coding Best Practices. <br />
+            Code Efficiency. <br />
             Setting up modern development environment.
           </p>
         </div>
@@ -103,7 +100,7 @@ export default function Tech() {
           <fieldset className="Tech__skillsBorder Tech__skillsBorder--frontEnd">
             <legend className="Tech__skillsHeading">-Front-End-</legend>
             <div className="Tech__skills">
-              {skills.frontEnd.map(skill => (
+              {skills.frontEnd.map((skill) => (
                 <TechIcon
                   key={skill[0]}
                   name={skill[0]}
@@ -117,7 +114,7 @@ export default function Tech() {
           <fieldset className="Tech__skillsBorder Tech__skillsBorder--backEnd">
             <legend className="Tech__skillsHeading">-Back-End-</legend>
             <div className="Tech__skills">
-              {skills.backEnd.map(skill => (
+              {skills.backEnd.map((skill) => (
                 <TechIcon
                   key={skill[0]}
                   name={skill[0]}
@@ -131,7 +128,7 @@ export default function Tech() {
           <fieldset className="Tech__skillsBorder Tech__skillsBorder--devOps">
             <legend className="Tech__skillsHeading">-Dev-Ops | Other-</legend>
             <div className="Tech__skills">
-              {skills.devOps.map(skill => (
+              {skills.devOps.map((skill) => (
                 <TechIcon
                   key={skill[0]}
                   name={skill[0]}

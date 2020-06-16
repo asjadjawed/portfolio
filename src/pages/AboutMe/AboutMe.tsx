@@ -20,27 +20,21 @@ export default function AboutMe() {
         </div>
         <div className="AboutMe__bio">
           <p>
-            I am a qualified accountant (IMA-USA) turned{" "}
-            <strong>Full-Stack Developer</strong>. My earliest programming
-            experience, was with GW-BASIC on an Intel 286 back in the{" "}
-            <strong>90s</strong> ( computers have come a long way since...).
+            I am a qualified accountant and a{" "}
+            <strong>Full-Stack Developer</strong>. I started programming with
+            GW-BASIC on an Intel 286 back in the <strong>90s</strong> (
+            computers have come a long way since...).
           </p>
           <p>
-            During my career, I have provided various companies with tech
-            solutions for their accounting, finance, inventory management needs
-            (in addition to accounting / business management services).
+            I have provided companies with tech solutions for their accounting,
+            finance, inventory management needs (in addition to accounting /
+            business management services). I also freelance as a Full-Stack
+            developer.
           </p>
           <p>
-            My skill set allows me to work with the ubiquitous{" "}
-            <strong>LAMP</strong> (Linux / Apache / MySQL / PHP) stack, the
-            cutting-edge <strong>MERN</strong> (MongoDB / Express / React /
-            Node.js), as well as <strong>Microsoft's .net</strong> solution for
-            enterprises (C# / ASP.net / SQL Server / Azure) allowing me to
-            deliver solutions as per the client's requirements.
-          </p>
-          <p>
-            I work closely with my clients to deliver solutions (Native / Cloud)
-            that are customized to their needs.
+            I have worked with the LAMP stack, developed desktop apps with
+            Microsoft's .net. Currently, I use Javascript, Typescript & Python
+            to develop solutions best suited to client needs.
           </p>
         </div>
       </div>
