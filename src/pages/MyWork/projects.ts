@@ -1,5 +1,6 @@
 import { makeUniqueCountSortedArray } from "./tagFunctions";
 
+import crownClothingThumb from "./project-thumbs/crown-clothing.jpg";
 import faceRecognitionThumb from "./project-thumbs/face-recognition.jpg";
 import galleryThumb from "./project-thumbs/gallery.jpg";
 import gradientThumb from "./project-thumbs/gradient.jpg";
@@ -26,13 +27,30 @@ export interface IProject {
 
 export const projects: IProject[] = [
   {
+    description: "An online clothing store (React.js)",
+    heading: "Crown Clothing",
+    image: crownClothingThumb,
+    liveLink: "https://quirky-volhard-d4d1f9.netlify.app/",
+    projectID: "crown",
+    sourceLink: "https://github.com/asjadjawed/crown-clothing",
+    tags: [
+      "React",
+      "Sass",
+      "Redux",
+      "Firebase",
+      "Stripe API",
+      "React-Router",
+      "store",
+    ],
+  },
+  {
     description: "A real-estate agent website template (Sass + Grid)",
     heading: "Nexter",
     image: nexterThumb,
     liveLink: "https://asjad.dev/nexter/",
     projectID: "nexter",
     sourceLink: "https://github.com/asjadjawed/nexter",
-    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"]
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"],
   },
   {
     description: "A hotel app template with Sass + flexbox",
@@ -41,7 +59,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/trillo/",
     projectID: "trillo",
     sourceLink: "https://github.com/asjadjawed/trillo",
-    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"]
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "template"],
   },
   {
     description: "A tourism website using Sass + custom-built grid system",
@@ -50,7 +68,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/natours",
     projectID: "natours",
     sourceLink: "https://github.com/asjadjawed/natours/",
-    tags: ["HTML5", "CSS3", "Sass", "BEM", "website"]
+    tags: ["HTML5", "CSS3", "Sass", "BEM", "website"],
   },
   {
     description:
@@ -69,8 +87,8 @@ export const projects: IProject[] = [
       "Normalize.css",
       "Particles.js",
       "portfolio",
-      "website"
-    ]
+      "website",
+    ],
   },
   {
     description:
@@ -94,8 +112,8 @@ export const projects: IProject[] = [
       "Clarifai API",
       "face recognition",
       "Heroku",
-      "REST API"
-    ]
+      "REST API",
+    ],
   },
   {
     description:
@@ -115,8 +133,8 @@ export const projects: IProject[] = [
       "DarkSky API",
       "Heroku",
       "weather",
-      "REST API"
-    ]
+      "REST API",
+    ],
   },
   {
     description:
@@ -133,8 +151,8 @@ export const projects: IProject[] = [
       "React",
       "RoboHash API",
       "faker",
-      "funny"
-    ]
+      "funny",
+    ],
   },
   {
     description:
@@ -144,7 +162,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/gradient-generator/",
     projectID: "gradient",
     sourceLink: "https://github.com/asjadjawed/gradient-generator",
-    tags: ["HTML5", "CSS3", "JavaScript", "gradients"]
+    tags: ["HTML5", "CSS3", "JavaScript", "gradients"],
   },
   {
     description:
@@ -154,7 +172,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/todo-list/",
     projectID: "todo",
     sourceLink: "https://github.com/asjadjawed/todo-list",
-    tags: ["HTML5", "CSS3", "TypeScript", "Web Storage API", "todo"]
+    tags: ["HTML5", "CSS3", "TypeScript", "Web Storage API", "todo"],
   },
   {
     description:
@@ -164,7 +182,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/hackathon-signup/",
     projectID: "hackathon3k",
     sourceLink: "https://github.com/asjadjawed/hackathon-signup",
-    tags: ["HTML5", "CSS3", "Animate.css", "funny", "landing page"]
+    tags: ["HTML5", "CSS3", "Animate.css", "funny", "landing page"],
   },
   {
     description:
@@ -175,7 +193,7 @@ export const projects: IProject[] = [
     projectID: "notes",
     sourceLink:
       "https://github.com/asjadjawed/notes-node/blob/master/README.md",
-    tags: ["Node.js", "JSON", "yargs", "chalk", "Command Line", "filesystem"]
+    tags: ["Node.js", "JSON", "yargs", "chalk", "Command Line", "filesystem"],
   },
   {
     description:
@@ -185,7 +203,7 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/shopping-list/",
     projectID: "shopping",
     sourceLink: "https://github.com/asjadjawed/shopping-list",
-    tags: ["HTML5", "CSS3", "JavaScript", "Web Storage API", "list"]
+    tags: ["HTML5", "CSS3", "JavaScript", "Web Storage API", "list"],
   },
   {
     description:
@@ -195,8 +213,8 @@ export const projects: IProject[] = [
     liveLink: "https://asjad.dev/pic-gallery-flexbox/",
     projectID: "gallery",
     sourceLink: "https://github.com/asjadjawed/pic-gallery-flexbox",
-    tags: ["HTML5", "CSS3", "UnSplash API", "gallery"]
-  }
+    tags: ["HTML5", "CSS3", "UnSplash API", "gallery"],
+  },
 ];
 
 /**

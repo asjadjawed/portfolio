@@ -9,7 +9,7 @@ export default function Tech() {
   return (
     <div className="Tech">
       <h1 className="Tech__heading">
-        Services &amp;<span className="Tech__text--secondaryColor"> Tech</span>
+        Services &amp;<span className="Tech__text--secondaryColor">Tech</span>
       </h1>
       <h2 className="Tech__servicesHeading Tech__text--secondaryColor">
         <strong>I can help you with...</strong>
